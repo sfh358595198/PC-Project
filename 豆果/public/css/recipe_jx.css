@@ -1,0 +1,179 @@
+@charset "UTF-8";
+.headlist li:nth-child(2)>a {
+    color: #FFB31A;
+    font-weight: bold;
+    border-bottom: 2px solid #FFB31A;
+}
+
+.headlist li:nth-child(2)>a span:last-child {
+    background: url(https://cp1.douguo.com/static/nweb/images/share-more.png);
+}
+
+.type-tab {
+    height: 45px;
+    line-height: 45px;
+    margin: 11px 0px 25px;
+}
+
+.type-head {
+    width: 290px;
+}
+
+.type-head a {
+    float: left;
+    margin-right: 30px;
+    font-size: 14px;
+    color: #000;
+}
+
+.type-head a:hover {
+    color: #ffaa00!important;
+}
+
+.title {
+    font-size: 20px;
+    color: #333;
+    line-height: 20px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+#jxlist {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#jxlist .item {
+    float: left;
+    width: 300px;
+    height: 255px;
+    margin-bottom: 40px;
+}
+
+.cover img {
+    width: 300px;
+}
+
+.cover {
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+    display: block;
+    background: #F9F9F9;
+}
+
+.relative {
+    position: relative;
+}
+
+.cookname {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.relative .cookname {
+    display: block;
+    font-size: 15px;
+    color: #333;
+    line-height: 15px;
+    padding: 10px 0;
+}
+
+.relative .cookname:hover,
+.relative .author:hover {
+    color: #ffaa00;
+}
+
+.author {
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    color: #333333;
+}
+
+.author img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    vertical-align: bottom;
+}
+
+.proicon {
+    margin-left: 3px;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.proicon img {
+    display: block;
+    width: 100%;
+}
+
+#jxlist .view-coll {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+#jxlist .collect {
+    margin-left: 6px;
+}
+
+.view::before,
+.collest::before {
+    width: 17px;
+    height: 12px;
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 2px;
+    position: relative;
+    top: -1px;
+}
+
+.view::before {
+    background: url("https://cp1.douguo.com/static/nweb/images/view2.png?2");
+}
+
+.collest::before {
+    margin-left: 6px;
+    background: url("https://cp1.douguo.com/static/nweb/images/collect2.png?2") no-repeat center;
+}
+
+.pages {
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    margin: 20px auto 0;
+    height: 26px;
+}
+
+.pages li,
+.pages a {
+    display: inline-block;
+    padding: 2px 6px 3px;
+    background: #fff;
+    color: #333;
+    box-sizing: border-box;
+    margin: 0 7px;
+    border: 1px solid #333;
+    font-size: 14px;
+    border-radius: 4px;
+    height: 100%;
+    line-height: 22px;
+    cursor: pointer;
+}
+
+.ali.active {
+    background: #FFB31A;
+    color: #fff;
+    border: 1px solid #FFB31A;
+}

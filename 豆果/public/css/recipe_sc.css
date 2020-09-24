@@ -1,0 +1,100 @@
+@charset "UTF-8";
+.headlist li:nth-child(2)>a {
+    color: #FFB31A;
+    font-weight: bold;
+    border-bottom: 2px solid #FFB31A;
+}
+
+.headlist li:nth-child(2)>a span:last-child {
+    background: url(https://cp1.douguo.com/static/nweb/images/share-more.png);
+}
+
+a {
+    color: #333;
+}
+
+.type-tab {
+    height: 45px;
+    line-height: 45px;
+    margin: 11px 0px 25px;
+}
+
+.type-head {
+    width: 290px;
+}
+
+.type-head a {
+    float: left;
+    margin-right: 30px;
+    font-size: 14px;
+    color: #000;
+}
+
+.type-head a:nth-child(4) {
+    border-bottom: 2px solid #383830;
+    font-weight: bold;
+    color: #383830;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.bigtitle {
+    font-size: 20px;
+    color: #333;
+    line-height: 20px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.listbox {
+    display: flex;
+}
+
+.smalltitle a {
+    cursor: auto;
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #FFF0D2;
+    font-size: 16px;
+    width: 152px;
+    height: 56px;
+    line-height: 56px;
+    text-align: center;
+}
+
+.desclist {
+    width: 848px;
+    display: flex;
+}
+
+.desclist li {
+    width: 56px;
+    text-align: center;
+    font-size: 13px;
+    margin-left: 21px;
+    margin-bottom: 30px;
+    height: 74px;
+}
+
+.desclist li img {
+    width: 56px;
+    height: 56px;
+    border-radius: 4px;
+    display: block;
+}
+
+.itemmore a {
+    display: inline-block;
+    width: 56px;
+    height: 56px;
+    border-radius: 4px;
+    font-size: 13px;
+    color: #256dc6;
+    background-color: #e6f1ff;
+    text-align: center;
+    line-height: 56px;
+}

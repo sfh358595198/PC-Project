@@ -1,0 +1,432 @@
+@charset "UTF-8";
+body {
+    padding-top: 60px;
+}
+
+#header {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    background: #fff;
+}
+
+.container {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.header {
+    height: 60px;
+    padding: 15px 0;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.header>a:first-child {
+    height: 30px;
+    color: #333;
+    text-decoration: none;
+}
+
+.header>a:first-child>img {
+    height: 30px;
+}
+
+.headlist {
+    margin-left: 20px;
+    display: flex;
+}
+
+.headlist li {
+    border-radius: 8px 8px 0 0;
+    height: 30px;
+    line-height: 30px;
+    font-size: 15px;
+    padding: 0 12px;
+    position: relative;
+}
+
+.headlist li>a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    width: auto;
+    height: 30px;
+    line-height: 30px;
+    letter-spacing: 1px;
+}
+
+.icon {
+    display: inline-block;
+    width: 12px;
+    height: 6px;
+    vertical-align: middle;
+    background: url(https://cp1.douguo.com/static/nweb/images/more1-1.png);
+}
+
+.ctip,
+.Item3>.healthy {
+    display: none;
+    box-shadow: 0 2px 5px 0 rgba(64, 71, 81, 0.10);
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    font-size: 14px;
+    text-align: left;
+    background: #ffffff;
+    position: absolute;
+    top: 45px;
+    z-index: 99;
+    padding-left: 16px;
+    box-sizing: border-box;
+}
+
+.ctip {
+    width: 800px;
+    left: -162px;
+}
+
+.headlist .Item2,
+.headlist .Item3 {
+    height: 45px;
+}
+
+.Item2:hover .ctip {
+    display: block;
+}
+
+.ctab {
+    line-height: 55px;
+    display: flex;
+}
+
+.ctab a {
+    margin-right: 42px;
+    color: #383830;
+}
+
+.ctab a:hover {
+    color: #ffaa00;
+}
+
+.ctab a img {
+    display: inline-block;
+    height: 16px;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+}
+
+.cblok>.citem {
+    margin-bottom: 32px;
+    display: flex;
+}
+
+.cblok>.citem>span {
+    width: 100px;
+    text-align: center;
+    font-weight: bold;
+    margin-right: 16px;
+    line-height: 30px;
+    color: #333;
+}
+
+.cblok>.citem>.imublo {
+    width: 666px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cblok>.citem>.imublo>a {
+    width: 95px;
+    line-height: 30px;
+    color: #333;
+}
+
+.cmore {
+    line-height: 52px;
+    text-align: center;
+    border-top: 1px solid #E5E3DF;
+    margin-right: 16px;
+}
+
+.cmore a {
+    text-align: center;
+    font-size: 14px;
+    color: #256DC6;
+}
+
+.cmore a span,
+.cmore a img {
+    vertical-align: middle;
+}
+
+.Item3>.healthy {
+    width: 702px;
+    left: -162px;
+}
+
+.Item3:hover .healthy {
+    display: block;
+}
+
+.cblok>.diet>span {
+    text-align: center;
+    font-weight: bold;
+    margin-right: 16px;
+    line-height: 30px;
+    color: #333;
+    display: inline-block;
+    margin-right: 25px;
+}
+
+.diet {
+    margin-bottom: 25px;
+}
+
+.diet>a {
+    display: inline;
+    margin-right: 30px;
+    color: #333;
+}
+
+.headlist li>a:hover,
+.perinfo a:hover {
+    color: #ffaa00;
+}
+
+.headlist li>a:hover .icon {
+    background: url(https://cp1.douguo.com/static/nweb/images/share-more.png);
+}
+
+.search {
+    height: 30px;
+    margin-left: 15px;
+    position: relative;
+    border-radius: 4px;
+    position: relative;
+}
+
+.search input:first-child {
+    width: 182px;
+    height: 30px;
+    line-height: 16px;
+    padding: 7px 10px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    background: #F7F7F7;
+    color: #999;
+    font-size: 12px;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+
+.search input:nth-child(2) {
+    width: 38px;
+    height: 30px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background: #eee url(https://cp1.douguo.com/static/nweb/images/search2.png) no-repeat 12px 8px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    vertical-align: middle;
+}
+
+.preshow {
+    width: 100%;
+    display: none;
+    position: absolute;
+    top: 30px;
+    background: #fff;
+}
+
+.preshow li {
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+}
+
+.preshow li a {
+    display: block;
+    height: 30px;
+    color: #333;
+    padding-left: 10px;
+}
+
+.release {
+    width: 60px;
+    height: 45px;
+}
+
+.publish {
+    margin-left: 15px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background: #FFB31A;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 4px;
+    text-decoration: none;
+    position: relative;
+}
+
+.publish:hover {
+    cursor: pointer;
+}
+
+.publish:hover .pubt-box {
+    display: block;
+}
+
+.pubt-box {
+    display: none;
+    width: 130px;
+    background: #fff;
+    box-shadow: 0 0 5px 0 rgba(64, 71, 81, 0.10);
+    position: absolute;
+    z-index: 999;
+    top: 44px;
+    left: -35px;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.pubt-box a {
+    line-height: 36px;
+    display: block;
+    text-align: center;
+    font-size: 13px;
+    color: #333;
+}
+
+.pubt-box a:hover {
+    color: #ffaa00;
+}
+
+.perinfo {
+    margin-left: 40px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.perinfo a {
+    font-size: 15px;
+    color: #000;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.perinfo span {
+    margin: 0 4px;
+    display: inline-block;
+    height: 18px;
+    overflow: hidden;
+}
+
+
+/* 以上是头部 */
+
+
+/* 以下是尾部 */
+
+#footer {
+    width: 100%;
+    margin-top: 30px;
+    background: #f8f8f8;
+}
+
+.dginfo {
+    height: 188px;
+    display: flex;
+}
+
+.footleft {
+    width: 690px;
+    height: 100%;
+    padding-top: 35px;
+    box-sizing: border-box;
+}
+
+.footlogo {
+    width: 147px;
+}
+
+.footlogo img {
+    display: block;
+    width: 100%;
+}
+
+.datainfo p {
+    color: #999;
+    line-height: 160%;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.datainfo p span {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 24px;
+    color: #84b92c;
+    line-height: 160%;
+}
+
+.footright {
+    padding-top: 16px;
+}
+
+.footright>h3 {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.footright ul {
+    display: flex;
+}
+
+.footright ul li {
+    width: 92px;
+    margin-right: 12px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.footest {
+    padding-top: 18px;
+}
+
+.footlink {
+    width: 940px;
+    text-align: center;
+    margin: 15px auto;
+    font-size: 12px;
+}
+
+.footlink a,
+.footlink span {
+    color: #6b553f;
+}
+
+.cght {
+    font-size: 12px;
+}
+
+.cght a {
+    color: #333;
+}
+
+.fans {
+    padding: 15px 0 20px;
+    text-align: center;
+}
+
+.fans a {
+    margin: 0 5px;
+}

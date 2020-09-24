@@ -1,0 +1,618 @@
+article {
+    padding-top: 60px;
+    background: #fff;
+}
+
+#cyh-content a {
+    text-decoration: none;
+}
+
+#cyh-content a:hover {
+    text-decoration: none;
+}
+
+.clearfix:after {
+    content: '';
+    height: 0;
+    display: block;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+#cyh-content {
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#cyh-left {
+    width: 690px;
+}
+
+.cyh-bannerbox {
+    width: 690px;
+    height: 390px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.cyh-bannerbox>a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+}
+
+.cyh-bannerbox>a>img {
+    width: 100%;
+}
+
+.cyh-rinfo {
+    margin-top: 20px;
+    padding: 9px 0 40px;
+}
+
+.cyh-title {
+    font-size: 22px;
+    color: #333;
+    font-weight: bold;
+    line-height: 24px;
+}
+
+.cyh-titleTag {
+    margin-top: 10px;
+}
+
+.cyh-titleTag span {
+    display: inline-block;
+    margin-right: 16px;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    width: 42px;
+    box-sizing: border-box;
+    height: 22px;
+    line-height: 22px;
+    border-radius: 2px;
+}
+
+.cyh-bouti {
+    background: #FFB31A;
+}
+
+.cyh-exclu {
+    background: #FF4C44;
+}
+
+.cyh-vcnum {
+    font-size: 13px;
+    color: #333;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cyh-browseNum,
+.cyh-collectNum {
+    font-size: 24px;
+    color: #FFB31A;
+    position: relative;
+    top: 2px;
+}
+
+.cyh-collectNum {
+    margin-left: 40px;
+}
+
+.cyh-collect {
+    width: 80px;
+    height: 34px;
+    border-radius: 4px;
+    color: #fff;
+    border: 1px solid #FFB31A;
+    font-size: 15px;
+    text-align: center;
+    line-height: 34px;
+    /* background: #FFB31A url(../img/collect.png) no-repeat 15px 10px; */
+    background: #FFB31A url(https://cp1.douguo.com/static/nweb/images/star1.png?1) no-repeat 15px 10px;
+    padding-left: 20px;
+}
+
+.cyh-anthorInfo {
+    font-size: 16px;
+    color: #666;
+    margin: 25px 0;
+    display: flex;
+}
+
+.cyh-anthorInfo a {
+    color: #333;
+    text-decoration: none;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.cyh-anthorInfo>a>img {
+    width: 30px;
+    height: 30px;
+}
+
+.cyh-anthorInfo-desc {
+    font-size: 16px;
+    color: #666;
+    margin-left: 6px;
+    position: relative;
+    margin-right: 20px;
+}
+
+.cyh-anthorInfo-desc>span {
+    font-size: 13px;
+    color: #333;
+    vertical-align: middle;
+    line-height: 30px;
+}
+
+.cyh-anthorInfo-desc>img {
+    margin-left: 3px;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.cyh-anthorInfo-gz {
+    height: 30px;
+    width: 73px;
+    line-height: 28px;
+    text-align: center;
+    color: #333;
+    border: 1px solid #333;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.cyh-anthorInfo-gz>span {
+    font-size: 14px;
+}
+
+.cyh-intro {
+    font-size: 15px;
+    color: #333;
+    line-height: 27px;
+}
+
+
+/* 用料 */
+
+.cyh-materials {
+    padding-bottom: 40px;
+}
+
+.cyh-mini-title {
+    font-size: 18px;
+    color: #333;
+    line-height: 18px;
+    font-weight: bold;
+    margin: 30px 0 20px;
+}
+
+.cyh-mat-table {
+    width: 690px;
+}
+
+.cyh-mat-table tr {
+    background: #F1F7FA;
+    color: #333;
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+.cyh-mat-tL {
+    width: 343px;
+    border-right: 1px solid #e5e5e5;
+    padding: 16px 18px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    border-top: 1px solid #e5e5e5;
+    box-sizing: border-box;
+}
+
+.cyh-borderTop {
+    border-top: 0;
+}
+
+.cyh-mtLname {
+    color: #12937c;
+}
+
+
+/* 做法步骤 */
+
+.cyh-step-item {
+    margin: 25px 0 40px;
+    display: flex;
+}
+
+.cyh-sI-left {
+    flex-shrink: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+}
+
+.cyh-sI-right {
+    height: 200px;
+    margin-left: 10px;
+    font-size: 15px;
+    color: #333;
+    line-height: 27px;
+    overflow: hidden;
+}
+
+
+/* 小贴士 */
+
+.cyh-tips {
+    padding-bottom: 40px;
+}
+
+.cyh-creattim {
+    font-size: 12px;
+    color: #999;
+}
+
+.cyh-copyright {
+    font-size: 13px;
+    color: #333;
+    margin: 10px 0 20px;
+}
+
+
+/* 其他做法、相关推荐 */
+
+.cyh-else-more {
+    font-size: 13px;
+    color: #256DC6;
+    float: right;
+    height: 18px;
+    line-height: 18px;
+}
+
+.cyh-else-more>img {
+    height: 10px;
+    margin-bottom: 4px;
+}
+
+.cyh-elsePra-list,
+.cyh-relatedPra-list {
+    padding: 5px 0 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cyh-elsePra-item,
+.cyh-relatedPra-item {
+    flex-shrink: 0;
+    width: 220px;
+    height: 270px;
+    margin: 0 15px 25px 0;
+}
+
+.cyh-elsePra-item1,
+.cyh-relatedPra-item1 {
+    margin-right: 0;
+}
+
+.cyh-item-img {
+    width: 220px;
+    height: 220px;
+}
+
+.cyh-elseItem-name,
+.cyh-relatedItem-name {
+    display: block;
+    width: 100%;
+    line-height: 35px;
+    height: 35px;
+    font-size: 15px;
+    color: #333;
+}
+
+.cyh-elseItem-anthor,
+.cyh-relatedItem-anthor {
+    font-size: 12px;
+    color: #333;
+}
+
+.cyh-elseItem-name:hover,
+.cyh-elseItem-anthor:hover {
+    color: #ffaa00;
+    text-decoration: none;
+}
+
+.cyh-relatedItem-name:hover,
+.cyh-relatedItem-anthor:hover {
+    color: #ffaa00;
+    text-decoration: none;
+}
+
+
+/* 上传我做的这道菜 */
+
+.cyh-upload a {
+    display: block;
+    width: 168px;
+    height: 42px;
+    text-align: center;
+    line-height: 42px;
+    color: #fff;
+    background: #FFB31A;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 25px auto 35px;
+    border-radius: 4px;
+}
+
+
+/* 你当前的位置 */
+
+.cyh-text-lips {
+    font-size: 13px;
+    color: #333;
+    line-height: 13px;
+    padding: 35px 0 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.cyh-text-lips a {
+    color: #333;
+    text-decoration: none;
+}
+
+.cyh-text-lips a:hover {
+    color: #ffaa00;
+}
+
+.cyh-text-lips a:visited {
+    color: #ffaa00;
+}
+
+
+/* 评论 */
+
+.cyh-comment-textBox {
+    font-size: 12px;
+    padding-bottom: 20px;
+    display: flex;
+}
+
+.cyh-comment-textBox img {
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    margin-right: 12px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.cyh-comment-ipt {
+    width: 648px;
+    height: 112px;
+    resize: none;
+    padding: 12px;
+    border: 1px solid #E5E3DF;
+    border-radius: 4px;
+}
+
+.cyh-comm-btn {
+    color: #FFB31A;
+    right: 0;
+    margin-top: 10px;
+    display: inline-block;
+    border-radius: 4px;
+    height: 34px;
+    width: 104px;
+    text-align: center;
+    line-height: 34px;
+    font-size: 15px;
+    border: 1px solid #FFB31A;
+    float: right;
+}
+
+.cyh-comm-btn:hover {
+    color: #FFB31A;
+}
+
+.cyh-comms {
+    padding-bottom: 40px;
+}
+
+.cyh-comms-item {
+    padding: 20px 0;
+    border-bottom: 1px solid #E5E3DF;
+    position: relative;
+}
+
+.cyh-comms-item img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    float: left;
+}
+
+.cyh-author-comment {
+    margin-left: 10px;
+    width: 627px;
+    float: left;
+}
+
+.cyh-auC-name {
+    font-size: 13px;
+    margin-top: 6px;
+}
+
+.cyh-auC-commtxt {
+    font-size: 15px;
+    color: #333;
+    margin-top: 6px;
+    /* line-height: 24px; */
+}
+
+.cyh-auC-time {
+    font-size: 13px;
+    color: #999;
+    margin-top: 14px;
+    display: inline-block;
+}
+
+.cyh-auC-relay {
+    display: inline-block;
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    color: #256DC6;
+    font-size: 13px;
+}
+
+
+/* 右边内容 */
+
+#cyh-right {
+    width: 285px;
+}
+
+.cyh-ad {
+    width: 285px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.cyh-ad-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cyh-ad-item {
+    margin-top: 4px;
+    width: 140px;
+    box-sizing: border-box;
+}
+
+.cyh-ad-item1 {
+    margin-right: 5px;
+}
+
+.cyh-ad-itemIMG {
+    width: 140px;
+    height: 100px;
+    border: 1px solid #ddd;
+}
+
+.cyh-ad-item:hover {
+    color: red;
+}
+
+.cyh-ad-item:hover .cyh-ad-itemIMG {
+    border-color: red;
+}
+
+.cyh-ad-itemNAME {
+    font-size: 12px;
+    text-align: center;
+}
+
+
+/* 被加入的菜单 */
+
+.cyh-addmenu {
+    padding-bottom: 20px;
+}
+
+.cyh-addmenu-title {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 34px;
+    padding: 40px 0 5px;
+}
+
+.cyh-btn-addmenu {
+    width: 92px;
+    height: 34px;
+    line-height: 32px;
+    text-align: center;
+    border: 1px solid #333;
+    color: #333;
+    font-size: 15px;
+    border-radius: 5px;
+    float: right;
+}
+
+.cyh-swiper {
+    width: 280px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.cyh-swiper img {
+    width: 280px;
+}
+
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.cyh-swiper .swiper-button-next,
+.cyh-swiper .swiper-button-prev {
+    background-size: 18px 44px;
+}
+
+.cyh-swiper .swiper-button-next:hover,
+.cyh-swiper .swiper-button-prev:hover {
+    background-color: #000;
+}

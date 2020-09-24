@@ -1,0 +1,152 @@
+article {
+    overflow: hidden;
+}
+
+.g-container {
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.clearfix {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.g-CaiLeft {
+    width: 67%;
+    float: left;
+}
+
+.g-CaiRight {
+    width: 33%;
+    float: right;
+}
+
+.title1 {
+    height: 34px;
+}
+
+.g-title {
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 26px;
+    float: left;
+}
+
+.g-collect {
+    float: right;
+    width: 80px;
+    height: 34px;
+    border-radius: 4px;
+    color: #fff;
+    /* border: 1px solid #FFB31A; */
+    background-color: #ffb31a;
+    font-size: 15px;
+    text-align: center;
+    line-height: 32px;
+    /* padding-left: 20px; */
+}
+
+.author {
+    display: inline-block;
+    font-size: 13px;
+    line-height: 30px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.concern {
+    display: inline-block;
+    width: 80px;
+    text-align: center;
+    height: 30px;
+    line-height: 28px;
+    font-size: 12px;
+    border-radius: 4px;
+    color: #333;
+    border: 1px solid #333;
+}
+
+.intro {
+    font-size: 15px;
+    line-height: 27px;
+}
+
+.time {
+    padding: 15px 0 40px;
+    border-bottom: 1px solid #d8d8d8;
+    color: #999;
+    font-size: 13px;
+}
+
+.g-caiLists {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.g-cai {
+    /* float: left; */
+    width: 220px;
+    height: 270px;
+    /* overflow: hidden; */
+    /* margin-right: 15px; */
+    margin-bottom: 27px;
+}
+
+.g-cai a {
+    color: #333;
+}
+
+.g-cai a p:hover,
+.name2:hover {
+    color: #ffaa00;
+}
+
+.cai_photo {
+    width: 220px;
+    height: 220px;
+}
+
+.name1 {
+    font-size: 15px;
+    line-height: 35px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.name2 {
+    /* display: block; */
+    font-size: 12px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap
+}
+
+.right-title {
+    padding-left: 15px;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 18px;
+    display: inline-block;
+    font-weight: bold;
+    color: #333;
+}
+
+.tou {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 8px;
+    margin-bottom: 12px;
+}
+
+.imgLists {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+}

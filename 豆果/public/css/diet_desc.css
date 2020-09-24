@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+article {
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+.content {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.headlist li:nth-child(3)>a {
+    color: #FFB31A;
+    font-weight: bold;
+    border-bottom: 2px solid #FFB31A;
+}
+
+.headlist li:nth-child(3)>a span:last-child {
+    background: url(https://cp1.douguo.com/static/nweb/images/share-more.png);
+}
+
+article {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.clearfix::after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.type-tab {
+    width: 1000px;
+    height: 45px;
+    margin-bottom: 25px;
+    padding-top: 11px;
+}
+
+.type-header {
+    font-size: 14px;
+    text-align: center;
+    width: auto;
+    margin: 0 auto;
+    display: inline-block;
+}
+
+.type-header a:hover {
+    color: #FFB31A;
+}
+
+.type-header .active:hover {
+    color: #FFB31A;
+}
+
+.type-header a {
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+    display: inline-block;
+    color: #383830;
+    height: 42px;
+    line-height: 42px;
+    margin-right: 30px;
+}
+
+.type-header a.active {
+    border-bottom: 2px solid #383830;
+    font-weight: bold;
+    color: #383830;
+}
+
+#left {
+    width: 690px;
+    float: left;
+    /* outline: 1px solid red; */
+}
+
+.article-content .main-top h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    line-height: 33px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.art-info {
+    font-size: 15px;
+}
+
+.art-info span {
+    margin-right: 20px;
+    color: #999;
+}
+
+.art-info a,
+.copy a {
+    color: #1a1a00;
+}
+
+.art-info a,
+.copy a {
+    color: #1a1a00;
+}
+
+.art-info span {
+    margin-right: 20px;
+    color: #999;
+}
+
+.art-info span {
+    margin-right: 20px;
+    color: #999;
+}
+
+.art-info span {
+    margin-right: 20px;
+    color: #999;
+}
+
+.article-content .header {
+    text-align: center;
+    border-bottom: 1px solid #E5E3DF;
+    padding-bottom: 20px;
+}
+
+.tiji {
+    font-size: 12px;
+    color: #999;
+    line-height: 20px;
+    margin: 16px 0 20px;
+    text-align: justify;
+}
+
+.par p {
+    font-size: 15px;
+    line-height: 27px;
+    padding-bottom: 16px;
+}
+
+.par img {
+    display: block;
+    width: 100%;
+}
+
+img {
+    vertical-align: bottom;
+}
+
+.copy {
+    font-size: 13px;
+    color: #999;
+    padding: 80px 0 20px;
+}
+
+.comment .mini-title {
+    font-size: 16px;
+    color: #333;
+    line-height: 20px;
+    font-weight: bold;
+    margin: 40px 0 25px;
+}
+
+#comment .in-comment {
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+#comment .in-comment .author-img {
+    width: 30px;
+    height: 30px;
+    margin-right: 12px;
+    overflow: hidden;
+}
+
+#comment .author-img,
+.author-comment {
+    float: left;
+}
+
+#comment .in-comment .comm-txt {
+    width: 622px;
+    height: 112px;
+    resize: none;
+    padding: 12px;
+    border: 1px solid #E5E3DF;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.left {
+    float: left;
+}
+
+#comment .in-comment>.comm-btn {
+    float: right;
+    color: #FFB31A;
+    right: 0;
+    margin-top: 10px;
+    border-radius: 4px;
+    height: 34px;
+    width: 104px;
+    text-align: center;
+    line-height: 34px;
+    font-size: 15px;
+    border: 1px solid #FFB31A;
+}
+
+textarea {
+    outline: none;
+    border: none;
+}
+
+#comment .author-img,
+.author-comment {
+    float: left;
+}
+
+#right {
+    width: 280px;
+    float: right;
+}
+
+element.style {
+    width: 280px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+element.style {
+    width: 280px;
+    overflow: hidden;
+}
+
+button {
+    float: right;
+    color: #FFB31A;
+    right: 0;
+    margin-top: 10px;
+    border-radius: 4px;
+    height: 34px;
+    width: 104px;
+    text-align: center;
+    line-height: 34px;
+    font-size: 15px;
+    border: 1px solid #FFB31A;
+    outline: none;
+}

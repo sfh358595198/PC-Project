@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="../public/css/register.css">
+</head>
+
+<body>
+    <header>
+        <div class="head">
+            <a href=""><img src="https://passport.douguo.com/public/img/web/logo_lo.png?191218" alt=""></a>
+        </div>
+    </header>
+    <section>
+        <div class="main">
+            <div class="mian-title">
+                <p>新用户注册</p>
+                <p class="text">已有账号 , <a href="login.html">直接登录></a></p>
+            </div>
+            <div class="main-form">
+                <div class="box">
+                    <div class="ipts clear">
+                        <input type="text" class="ipt fl" id="phone" autocomplete="off" placeholder="请输入手机号">
+                        <div class="hints fl">请输入手机号</div>
+                    </div>
+                    <p class="hint" style="visibility: visible;">输入常用的手机号，便于登陆和召回密码</p>
+                </div>
+                <div class="box">
+                    <div class="ipts clear">
+                        <input type="text" class="ipt fl" id="name" autocomplete="off" placeholder="请输入昵称">
+                        <div class="hints fl">请输入昵称</div>
+                    </div>
+                    <p class="hint">中英文均可，最多16个字喔~</p>
+                </div>
+                <div class="box">
+                    <div class="ipts clear">
+                        <input type="text" class="ipt fl" id="psw" autocomplete="off" placeholder="请输入密码">
+                        <div class="hints fl">请输入密码</div>
+                    </div>
+                    <p class="hint">密码长度为6-20位，不能含有空格</p>
+                </div>
+                <div class="box">
+                    <div class="ipts clear">
+                        <input type="text" class="ipt fl" id="psws" autocomplete="off" placeholder="确认密码">
+                        <div class="hints fl"></div>
+                    </div>
+                    <p class="hint">再输入一次密码</p>
+                </div>
+                <div class="verify clear">
+                    <input type="text" class="verify-ipt fl" id="code" autocomplete="off" placeholder="输入验证码">
+                    <div id="num" class="fl" onclick="ranDom()"></div>
+                </div>
+                <p id="txt"></p>
+                <div class="protocol"><input type="checkbox" id="auto">
+                    <p>我已阅读并且同意<span>豆果美食使用协议</span></p>
+                </div>
+                <button type="button" id="submit">注册</button>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div>关于豆果 · 在豆果工作 · 意见反馈 · 友情链接 · 菜谱大全 · 品牌馆</div>
+        <p>©2009-2015 北京豆果信息技术有限公司 京ICP证111032号 京公网安备11010102001133号 京网文[2014]0774-174号</p>
+    </footer>
+    <script src="../public/js/jquery.min.js"></script>
+    <script src="../public/js/register.js"></script>
+</body>
+
+</html>

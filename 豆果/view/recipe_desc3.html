@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>recipe_desc3</title>
+    <link rel="stylesheet" href="../public/css/reset.css">
+    <link rel="stylesheet" href="../public/css/common.css">
+    <link rel="stylesheet" href="">
+    <script src="../public/js/jquery.min.js"></script>
+    <!-- <script src="../public/js/vue.js"></script> -->
+</head>
+<style>
+    .type-tab {
+        display: flex;
+        margin: 11px 0 25px;
+    }
+    
+    .type-tab a {
+        display: inline-block;
+        color: #383830;
+        height: 42px;
+        line-height: 42px;
+        margin-right: 30px;
+    }
+    
+    .type-tab a.active {
+        border-bottom: 2px solid #383830;
+        font-weight: bold;
+        color: #383830;
+    }
+    
+    h1 {
+        font-size: 18px;
+        line-height: 18px;
+        font-weight: bold;
+    }
+    
+    .sort-more {
+        margin: 25px 0 10px;
+    }
+    
+    .sort-more a {
+        font-size: 14px;
+        color: #999;
+        padding-right: 10px;
+    }
+    
+    .sort-more a.active {
+        color: #333;
+        font-weight: bold;
+    }
+    
+    .content {
+        display: flex;
+    }
+    
+    .left {
+        width: 690px;
+        margin-top: 25px;
+    }
+    
+    .main-list li {
+        display: flex;
+        margin-bottom: 40px;
+    }
+    
+    .main-list li>a {
+        display: block;
+        width: 180px;
+        height: 125px;
+        border-radius: 8px;
+        overflow: hidden;
+        margin-right: 15px;
+    }
+    
+    .main-list li>a img {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .right-info {
+        display: inline-block;
+    }
+    
+    .right-info>a {
+        display: block;
+        padding-top: 8px;
+        font-size: 18px;
+        color: #333;
+        font-weight: bold;
+        overflow: hidden;
+        line-height: 18px;
+        margin-bottom: 14px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    
+    .right-info p:nth-child(2) {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        font-size: 14px;
+        color: #2a2a2a;
+        line-height: 14px;
+        vertical-align: middle;
+    }
+    
+    .right-info p:nth-child(3) {
+        margin: 11px 0 10px;
+    }
+    
+    .right-info p:nth-child(3) span:first-child {
+        display: inline-block;
+        width: 91px;
+        height: 16px;
+        vertical-align: bottom;
+        background: url(https://cp1.douguo.com/static/nweb/images/star.png?1) no-repeat;
+        background-size: 100%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        font-size: 14px;
+        color: #2a2a2a;
+        line-height: 14px;
+    }
+    
+    .right-info p:nth-child(3) span:last-child {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        font-size: 14px;
+        color: #2a2a2a;
+        line-height: 14px;
+        vertical-align: middle;
+    }
+    
+    .headicon {
+        display: inline-block;
+        vertical-align: middle;
+        overflow: hidden;
+        font-size: 14px;
+        color: #333;
+    }
+    
+    .headicon img {
+        display: inline-block;
+        width: 21px;
+        height: 21px;
+        vertical-align: middle;
+        border-radius: 50%;
+        position: relative;
+        top: -2px;
+    }
+    
+    .aut-num {
+        height: 24px;
+    }
+    
+    .proicon {
+        margin-left: 3px;
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    
+    .proicon img {
+        display: block;
+        width: 100%;
+    }
+    
+    .pages {
+        /* text-align: center; */
+        display: flex;
+        justify-content: center;
+        margin: 20px auto 0;
+        height: 26px;
+    }
+    
+    .pages li,
+    .pages a {
+        display: inline-block;
+        padding: 2px 6px 3px;
+        background: #fff;
+        color: #333;
+        box-sizing: border-box;
+        margin: 0 7px;
+        border: 1px solid #333;
+        font-size: 14px;
+        border-radius: 4px;
+        height: 100%;
+        line-height: 22px;
+        cursor: pointer;
+    }
+    
+    .ali.active {
+        background: #FFB31A;
+        color: #fff;
+        border: 1px solid #FFB31A;
+    }
+    
+    .searchall {
+        font-size: 24px;
+    }
+    
+    .all_search .name {
+        display: inline-block;
+        width: 128px;
+        font-size: 16px;
+        color: #333;
+        line-height: 28px;
+        padding: 8px 0;
+        margin: 0 10px 0 0;
+        box-sizing: border-box;
+        overflow: hidden;
+        background-color: white;
+    }
+    
+    .all_search .name:nth-child(2n) {
+        margin: 0;
+    }
+</style>
+
+<body>
+    <header>
+        <div id="header">
+            <div class="container header">
+                <a href="index.html"><img src="https://cp1.douguo.com/static/nweb/images/logo3.png?20191218" alt=""></a>
+                <ul class="headlist">
+                    <li><a href="index.html">首页</a></li>
+                    <li class="Item2"><a href="recipe_jx.html"><span>菜谱</span><span class="icon"></span></a>
+                        <div class="ctip">
+                            <div class="ctab">
+                                <a href="recipe_jx.html"><img src="https://cp1.douguo.com/static/nweb/images/jx3.png" alt=""> 精选</a>
+                                <a href="recipe_zx.html"><img src="https://i1.douguo.com/upload/banner/1585648022.png" alt=""> 最新</a>
+                                <a href="recipe_cd.html"><img src="https://cp1.douguo.com/static/nweb/images/menu3.png" alt=""> 菜单</a>
+                            </div>
+                            <div class="cblok">
+                                <div class="citem">
+                                    <span>常见菜式</span>
+                                    <div class="imublo">
+                                        <a href="recipe_desc3.html?家常菜" target="_blank">家常菜</a>
+                                        <a href="recipe_desc3.html?热菜" target="_blank">热菜</a>
+                                        <a href="recipe_desc3.html?凉菜" target="_blank">凉菜</a>
+                                        <a href="recipe_desc3.html?主食" target="_blank">主食</a>
+                                        <a href="recipe_desc3.html?汤" target="_blank">汤</a>
+                                        <a href="recipe_desc3.html?早餐" target="_blank">早餐</a>
+                                        <a href="recipe_desc3.html?午餐" target="_blank">午餐</a>
+                                        <a href="recipe_desc3.html?海鲜" target="_blank">海鲜</a>
+                                        <a href="recipe_desc3.html?孕妇" target="_blank">孕妇</a>
+                                        <a href="recipe_desc3.html?甜品" target="_blank">甜品</a>
+                                        <a href="recipe_desc3.html?粥" target="_blank">粥</a>
+                                        <a href="recipe_desc3.html?宝宝食谱" target="_blank">宝宝食谱</a>
+                                        <a href="recipe_desc3.html?糕点" target="_blank">糕点</a>
+                                        <a href="recipe_desc3.html?微波炉" target="_blank">微波炉</a>
+                                    </div>
+                                </div>
+                                <div class="citem">
+                                    <span>中国菜系</span>
+                                    <div class="imublo">
+                                        <a href="recipe_desc3.html?川菜" target="_blank">川菜</a>
+                                        <a href="recipe_desc3.html?粤菜" target="_blank">粤菜</a>
+                                        <a href="recipe_desc3.html?东北菜" target="_blank">东北菜</a>
+                                        <a href="recipe_desc3.html?湘菜" target="_blank">湘菜</a>
+                                        <a href="recipe_desc3.html?鲁菜" target="_blank">鲁菜</a>
+                                        <a href="recipe_desc3.html?浙菜" target="_blank">浙菜</a>
+                                        <a href="recipe_desc3.html?湖北菜" target="_blank">湖北菜</a>
+                                        <a href="recipe_desc3.html?清真菜" target="_blank">清真菜</a>
+                                    </div>
+                                </div>
+                                <div class="citem">
+                                    <span>外国食谱</span>
+                                    <div class="imublo">
+                                        <a href="recipe_desc3.html?韩国" target="_blank">韩国</a>
+                                        <a href="recipe_desc3.html?日本料理" target="_blank">日本料理</a>
+                                        <a href="recipe_desc3.html?法国" target="_blank">法国</a>
+                                        <a href="recipe_desc3.html?意大利餐" target="_blank">意大利餐</a>
+                                    </div>
+                                </div>
+                                <div class="citem">
+                                    <span>各地小吃</span>
+                                    <div class="imublo">
+                                        <a href="recipe_desc3.html?四川小吃" target="_blank">四川小吃</a>
+                                        <a href="recipe_desc3.html?广东小吃" target="_blank">广东小吃</a>
+                                        <a href="recipe_desc3.html?北京小吃" target="_blank">北京小吃</a>
+                                        <a href="recipe_desc3.html?陕西小吃" target="_blank">陕西小吃</a>
+                                    </div>
+                                </div>
+                                <div class="citem">
+                                    <span>烘焙大全</span>
+                                    <div class="imublo">
+                                        <a href="recipe_desc3.html?蛋糕" target="_blank">蛋糕</a>
+                                        <a href="recipe_desc3.html?面包" target="_blank">面包</a>
+                                        <a href="recipe_desc3.html?饼干" target="_blank">饼干</a>
+                                        <a href="recipe_desc3.html?披萨" target="_blank">披萨</a>
+                                        <a href="recipe_desc3.html?甜品" target="_blank">甜品</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cmore">
+                                <a href="recipe_fl.html" target="_blank"><span>查看全部分类</span> <img src="https://cp1.douguo.com/static/nweb/images/more2.png" alt=""></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="Item3"><a href="diet_article.html"><span>健康饮食</span><span class="icon"></span></a>
+                        <div class="healthy">
+                            <div class="cblok">
+                                <div class="diet">
+                                    <span>饮食健康</span>
+                                    <a href="diet_article.html" target="_blank">饮食新闻</a>
+                                    <a href="recipe_desc3.html?美容瘦身" target="_blank">美容瘦身</a>
+                                    <a href="recipe_desc3.html?饮食小常识" target="_blank">饮食小常识</a>
+                                    <a href="recipe_desc3.html?养生秘方" target="_blank">养生秘方</a>
+                                </div>
+                                <div class="diet">
+                                    <span>功能性调理</span>
+                                    <a href="recipe_desc3.html?清热去火" target="_blank">清热去火</a>
+                                    <a href="recipe_desc3.html?减肥" target="_blank">减肥</a>
+                                    <a href="recipe_desc3.html?祛痰" target="_blank">祛痰</a>
+                                    <a href="recipe_desc3.html?乌发" target="_blank">乌发</a>
+                                    <a href="recipe_desc3.html?滋阴壮阳" target="_blank">滋阴壮阳</a>
+                                    <a href="recipe_desc3.html?健脾养胃" target="_blank">健脾养胃</a>
+                                </div>
+                                <div class="diet">
+                                    <span>人群膳食</span>
+                                    <a href="recipe_desc3.html?孕妇" target="_blank">孕妇</a>
+                                    <a href="recipe_desc3.html?老人" target="_blank">老人</a>
+                                    <a href="recipe_desc3.html?产妇" target="_blank">产妇</a>
+                                    <a href="recipe_desc3.html?哺乳期" target="_blank">哺乳期</a>
+                                </div>
+                                <div class="diet">
+                                    <span>疾病调理</span>
+                                    <a href="recipe_desc3.html?糖尿病" target="_blank">糖尿病</a>
+                                    <a href="recipe_desc3.html?高血压" target="_blank">高血压</a>
+                                    <a href="recipe_desc3.html?痛风" target="_blank">痛风</a>
+                                </div>
+                                <div class="diet">
+                                    <span>功效营养</span>
+                                    <a href="recipe_desc3.html?补钙" target="_blank">补钙</a>
+                                    <a href="recipe_desc3.html?贫血" target="_blank">贫血</a>
+                                    <a href="recipe_desc3.html?提高免疫力" target="_blank">提高免疫力</a>
+                                    <a href="recipe_desc3.html?养胃" target="_blank">养胃</a>
+                                    <a href="recipe_desc3.html?防雾霾" target="_blank">防雾霾</a>
+                                    <a href="recipe_desc3.html?润肺止咳" target="_blank">润肺止咳</a>
+                                    <a href="recipe_desc3.html?养颜" target="_blank">养颜</a>
+                                    <a href="recipe_desc3.html?失眠" target="_blank">失眠</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="note.html">笔记</a></li>
+                    <li><a href="mall.html">商城</a></li>
+                    <li><a href="comic.html">动漫</a></li>
+                </ul>
+                <div class="search">
+                    <input type="text" placeholder="搜索菜谱、菜单、食材、用户" id="search"><input type="text">
+                    <div class="preshow">
+                        <li class="item"><a href="recipe_desc3.html?减肥餐">1.减肥餐</a></li>
+                        <li class="item"><a href="recipe_desc3.html?家常菜">2.家常菜</a></li>
+                        <li class="item"><a href="recipe_desc3.html?南瓜">3.南瓜</a></li>
+                        <li class="item"><a href="recipe_desc3.html?月子餐">4.月子餐</a></li>
+                        <li class="item"><a href="recipe_desc3.html?饼干">5.饼干</a></li>
+                        <li class="item"><a href="recipe_desc3.html?宵夜">6.宵夜</a></li>
+                        <li class="item"><a href="recipe_desc3.html?土豆">7.土豆</a></li>
+                        <li class="item"><a href="recipe_desc3.html?快手菜">8.快手菜</a></li>
+                        <li class="item"><a href="recipe_desc3.html?早餐">9.早餐</a></li>
+                        <li class="item"><a href="recipe_desc3.html?口水鸡">10.口水鸡</a></li>
+                    </div>
+                </div>
+                <script>
+                    var ipt = document.getElementById('search');
+                    var preshow = document.querySelector('.preshow');
+                    ipt.onfocus = function() {
+                        this.placeholder = '';
+                        preshow.style.display = 'block';
+                    }
+                    ipt.onblur = function() {
+                        setTimeout(function() {
+                            preshow.style.display = 'none';
+                        }, 2000)
+                    }
+                </script>
+                <div class="publish">
+                    <div class="release">发布</div>
+                    <div class="pubt-box">
+                        <a href="login.html">发布菜谱</a>
+                        <a href="login.html">创建菜单</a>
+                    </div>
+                </div>
+                <div class="perinfo">
+                    <a href="login.html">登录</a><span>|</span><a href="register.html">注册</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <article>
+        <div class="container">
+            <div class="type-tab">
+                <a href="" class="active">菜谱</a>
+                <a href="">菜单</a>
+                <a href="">用户</a>
+            </div>
+            <h1 id='maintitle'></h1>
+            <div class="sort-more">
+                <a href="" class="active">综合最佳</a>|
+                <a href="">收藏最多</a>|
+                <a href="">做过最多</a>
+            </div>
+            <div class="content">
+                <div class="left">
+                    <ul class="main-list">
+                        <li class="item">
+                            <a href=""><img src="https://cp1.douguo.com/upload/caiku/6/c/a/400x266_6c56b5c1b850cd477f90a6a1d8eaaf9a.jpeg" alt=""></a>
+                            <div class="right-info">
+                                <a href="">美味红烧肉</a>
+                                <p>五花肉,八角,老抽,盐,糖,料酒,葱姜,油 </p>
+                                <p><span></span> <span>4.8分</span></p>
+                                <div class="aut-num">
+                                    <a href="" class="headicon"><img src="https://tx1.douguo.com/upload/photo/5/6/0/70_u12157371987027015022.jpeg" alt="">jmy的私房菜</a>
+                                    <a href="" class="proicon"><img src="https://i1.douguo.com/upload/note/d/a/a/da84247847aebe48d9dd0fcdac88862a.png" alt=""></a>
+                                </div>
+
+                            </div>
+                        </li>
+                        <li class="item">
+                            <a href=""><img src="https://cp1.douguo.com/upload/caiku/6/c/a/400x266_6c56b5c1b850cd477f90a6a1d8eaaf9a.jpeg" alt=""></a>
+                            <div class="right-info">
+                                <a href="">美味红烧肉</a>
+                                <p>五花肉,八角,老抽,盐,糖,料酒,葱姜,油 </p>
+                                <p><span></span> <span>4.8分</span></p>
+                                <div class="aut-num">
+                                    <a href="" class="headicon"><img src="https://tx1.douguo.com/upload/photo/5/6/0/70_u12157371987027015022.jpeg" alt="">jmy的私房菜</a>
+                                    <a href="" class="proicon"><img src="https://i1.douguo.com/upload/note/d/a/a/da84247847aebe48d9dd0fcdac88862a.png" alt=""></a>
+                                </div>
+
+                            </div>
+                        </li>
+                        <li class="item">
+                            <a href=""><img src="https://cp1.douguo.com/upload/caiku/6/c/a/400x266_6c56b5c1b850cd477f90a6a1d8eaaf9a.jpeg" alt=""></a>
+                            <div class="right-info">
+                                <a href="">美味红烧肉</a>
+                                <p>五花肉,八角,老抽,盐,糖,料酒,葱姜,油 </p>
+                                <p><span></span> <span>4.8分</span></p>
+                                <div class="aut-num">
+                                    <a href="" class="headicon"><img src="https://tx1.douguo.com/upload/photo/5/6/0/70_u12157371987027015022.jpeg" alt="">jmy的私房菜</a>
+                                    <a href="" class="proicon"><img src="https://i1.douguo.com/upload/note/d/a/a/da84247847aebe48d9dd0fcdac88862a.png" alt=""></a>
+                                </div>
+
+                            </div>
+                        </li>
+                        <li class="item">
+                            <a href=""><img src="https://cp1.douguo.com/upload/caiku/6/c/a/400x266_6c56b5c1b850cd477f90a6a1d8eaaf9a.jpeg" alt=""></a>
+                            <div class="right-info">
+                                <a href="">美味红烧肉</a>
+                                <p>五花肉,八角,老抽,盐,糖,料酒,葱姜,油 </p>
+                                <p><span></span> <span>4.8分</span></p>
+                                <div class="aut-num">
+                                    <a href="" class="headicon"><img src="https://tx1.douguo.com/upload/photo/5/6/0/70_u12157371987027015022.jpeg" alt="">jmy的私房菜</a>
+                                    <a href="" class="proicon"><img src="https://i1.douguo.com/upload/note/d/a/a/da84247847aebe48d9dd0fcdac88862a.png" alt=""></a>
+                                </div>
+
+                            </div>
+                        </li>
+                        <li class="item">
+                            <a href=""><img src="https://cp1.douguo.com/upload/caiku/6/c/a/400x266_6c56b5c1b850cd477f90a6a1d8eaaf9a.jpeg" alt=""></a>
+                            <div class="right-info">
+                                <a href="">美味红烧肉</a>
+                                <p>五花肉,八角,老抽,盐,糖,料酒,葱姜,油 </p>
+                                <p><span></span> <span>4.8分</span></p>
+                                <div class="aut-num">
+                                    <a href="" class="headicon"><img src="https://tx1.douguo.com/upload/photo/5/6/0/70_u12157371987027015022.jpeg" alt="">jmy的私房菜</a>
+                                    <a href="" class="proicon"><img src="https://i1.douguo.com/upload/note/d/a/a/da84247847aebe48d9dd0fcdac88862a.png" alt=""></a>
+                                </div>
+
+                            </div>
+                        </li>
+                        <li class="item">
+                            <a href=""><img src="https://cp1.douguo.com/upload/caiku/6/c/a/400x266_6c56b5c1b850cd477f90a6a1d8eaaf9a.jpeg" alt=""></a>
+                            <div class="right-info">
+                                <a href="">美味红烧肉</a>
+                                <p>五花肉,八角,老抽,盐,糖,料酒,葱姜,油 </p>
+                                <p><span></span> <span>4.8分</span></p>
+                                <div class="aut-num">
+                                    <a href="" class="headicon"><img src="https://tx1.douguo.com/upload/photo/5/6/0/70_u12157371987027015022.jpeg" alt="">jmy的私房菜</a>
+                                    <a href="" class="proicon"><img src="https://i1.douguo.com/upload/note/d/a/a/da84247847aebe48d9dd0fcdac88862a.png" alt=""></a>
+                                </div>
+
+                            </div>
+                        </li>
+                        <li class="item">
+                            <a href=""><img src="https://cp1.douguo.com/upload/caiku/6/c/a/400x266_6c56b5c1b850cd477f90a6a1d8eaaf9a.jpeg" alt=""></a>
+                            <div class="right-info">
+                                <a href="">美味红烧肉</a>
+                                <p>五花肉,八角,老抽,盐,糖,料酒,葱姜,油 </p>
+                                <p><span></span> <span>4.8分</span></p>
+                                <div class="aut-num">
+                                    <a href="" class="headicon"><img src="https://tx1.douguo.com/upload/photo/5/6/0/70_u12157371987027015022.jpeg" alt="">jmy的私房菜</a>
+                                    <a href="" class="proicon"><img src="https://i1.douguo.com/upload/note/d/a/a/da84247847aebe48d9dd0fcdac88862a.png" alt=""></a>
+                                </div>
+
+                            </div>
+                        </li>
+                        <li class="item">
+                            <a href=""><img src="https://cp1.douguo.com/upload/caiku/6/c/a/400x266_6c56b5c1b850cd477f90a6a1d8eaaf9a.jpeg" alt=""></a>
+                            <div class="right-info">
+                                <a href="">美味红烧肉</a>
+                                <p>五花肉,八角,老抽,盐,糖,料酒,葱姜,油 </p>
+                                <p><span></span> <span>4.8分</span></p>
+                                <div class="aut-num">
+                                    <a href="" class="headicon"><img src="https://tx1.douguo.com/upload/photo/5/6/0/70_u12157371987027015022.jpeg" alt="">jmy的私房菜</a>
+                                    <a href="" class="proicon"><img src="https://i1.douguo.com/upload/note/d/a/a/da84247847aebe48d9dd0fcdac88862a.png" alt=""></a>
+                                </div>
+
+                            </div>
+                        </li>
+                        <li class="item">
+                            <a href=""><img src="https://cp1.douguo.com/upload/caiku/6/c/a/400x266_6c56b5c1b850cd477f90a6a1d8eaaf9a.jpeg" alt=""></a>
+                            <div class="right-info">
+                                <a href="">美味红烧肉</a>
+                                <p>五花肉,八角,老抽,盐,糖,料酒,葱姜,油 </p>
+                                <p><span></span> <span>4.8分</span></p>
+                                <div class="aut-num">
+                                    <a href="" class="headicon"><img src="https://tx1.douguo.com/upload/photo/5/6/0/70_u12157371987027015022.jpeg" alt="">jmy的私房菜</a>
+                                    <a href="" class="proicon"><img src="https://i1.douguo.com/upload/note/d/a/a/da84247847aebe48d9dd0fcdac88862a.png" alt=""></a>
+                                </div>
+
+                            </div>
+                        </li>
+                        <li class="item">
+                            <a href=""><img src="https://cp1.douguo.com/upload/caiku/6/c/a/400x266_6c56b5c1b850cd477f90a6a1d8eaaf9a.jpeg" alt=""></a>
+                            <div class="right-info">
+                                <a href="">美味红烧肉</a>
+                                <p>五花肉,八角,老抽,盐,糖,料酒,葱姜,油 </p>
+                                <p><span></span> <span>4.8分</span></p>
+                                <div class="aut-num">
+                                    <a href="" class="headicon"><img src="https://tx1.douguo.com/upload/photo/5/6/0/70_u12157371987027015022.jpeg" alt="">jmy的私房菜</a>
+                                    <a href="" class="proicon"><img src="https://i1.douguo.com/upload/note/d/a/a/da84247847aebe48d9dd0fcdac88862a.png" alt=""></a>
+                                </div>
+
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="pages">
+                        <li class="first">首页</li>
+                        <li class="prev"></li>
+                        <li class="ali active">1</li>
+                        <li class="ali">2</li>
+                        <li class="ali">3</li>
+                        <li class="ali">4</li>
+                        <li class="next">下一页</li>
+                        <li class="last">末页</li>
+                    </ul>
+                </div>
+                <div id="right" style="width: 280px;">
+                    <div style="width: 280px;overflow: hidden;margin-bottom:40px">
+                        <div id="_f6pqgu7016m"><iframe width="300" frameborder="0" height="250" scrolling="no" src="https://pos.baidu.com/s?wid=300&amp;hei=250&amp;di=u2786910&amp;ltu=https%3A%2F%2Fwww.douguo.com%2Fcaipu%2F%25E5%25AE%25B6%25E5%25B8%25B8%25E8%258F%259C&amp;psi=0d46d0885734f79835967d80de611edb&amp;dc=3&amp;ti=%E5%AE%B6%E5%B8%B8%E8%8F%9C%E7%9A%84%E5%81%9A%E6%B3%95%E5%A4%A7%E5%85%A8_%E5%AE%B6%E5%B8%B8%E8%8F%9C%E7%9A%84%E5%AE%B6%E5%B8%B8%E5%81%9A%E6%B3%95_%E5%AE%B6%E5%B8%B8%E8%8F%9C%E6%80%8E%E4%B9%88%E5%81%9A%E5%A5%BD%E5%90%83_%E8%B1%86%E6%9E%9C%E7%BE%8E%E9%A3%9F&amp;ps=221x1171&amp;drs=3&amp;pcs=1903x965&amp;pss=1903x4096&amp;cfv=0&amp;cpl=3&amp;chi=1&amp;cce=true&amp;cec=UTF-8&amp;tlm=1600851957&amp;psr=1920x1080&amp;par=1920x1036&amp;pis=-1x-1&amp;ccd=24&amp;cja=false&amp;cmi=4&amp;col=zh-CN&amp;cdo=-1&amp;tcn=1600851958&amp;dtm=HTML_POST&amp;tpr=1600851957526&amp;ari=2&amp;ant=0&amp;exps=110257,110009,111000,112027,110011&amp;prot=2&amp;dis=0&amp;dai=1&amp;dri=0&amp;ltr=https%3A%2F%2Fwww.douguo.com%2Ffenlei"></iframe>
+                            <em style="display:none;cursor:auto;"></em>
+                        </div>
+                        <!-- <script type="text/javascript" src="//abc.douguo.com/lgvhifopmjn.js"></script> -->
+                    </div>
+                    <div style="width: 280px;overflow: hidden;margin-bottom:40px">
+                        <div id="_bzfm8f5i0p9" style="width: 100%;"><iframe width="300" frameborder="0" height="250" scrolling="no" src="https://pos.baidu.com/s?wid=300&amp;hei=250&amp;di=u2786910&amp;ltu=https%3A%2F%2Fwww.douguo.com%2Fcaipu%2F%25E5%25AE%25B6%25E5%25B8%25B8%25E8%258F%259C&amp;psi=0d46d0885734f79835967d80de611edb&amp;dc=3&amp;ti=%E5%AE%B6%E5%B8%B8%E8%8F%9C%E7%9A%84%E5%81%9A%E6%B3%95%E5%A4%A7%E5%85%A8_%E5%AE%B6%E5%B8%B8%E8%8F%9C%E7%9A%84%E5%AE%B6%E5%B8%B8%E5%81%9A%E6%B3%95_%E5%AE%B6%E5%B8%B8%E8%8F%9C%E6%80%8E%E4%B9%88%E5%81%9A%E5%A5%BD%E5%90%83_%E8%B1%86%E6%9E%9C%E7%BE%8E%E9%A3%9F&amp;ps=514x1171&amp;drs=3&amp;pcs=1903x965&amp;pss=1903x4096&amp;cfv=0&amp;cpl=3&amp;chi=1&amp;cce=true&amp;cec=UTF-8&amp;tlm=1600851957&amp;psr=1920x1080&amp;par=1920x1036&amp;pis=-1x-1&amp;ccd=24&amp;cja=false&amp;cmi=4&amp;col=zh-CN&amp;cdo=-1&amp;tcn=1600851958&amp;dtm=HTML_POST&amp;tpr=1600851957526&amp;ari=2&amp;ant=0&amp;exps=110257,110009,111000,112027,110011&amp;prot=2&amp;dis=0&amp;dai=2&amp;dri=1&amp;ltr=https%3A%2F%2Fwww.douguo.com%2Ffenlei"></iframe></div>
+                        <!-- <script type="text/javascript" src="//abc.douguo.com/lgvhifopmjn.js"></script> -->
+                    </div>
+                    <div class="all_search">
+                        <h3 class="searchall">大家都在搜</h3>
+                        <a href="recipe_desc3.html?家常菜" target="_blank" class="small_search"><span class="name"><span style="font-size: 12px;">• </span>家常菜</span></a>
+                        <a href="recipe_desc3.html?热菜" target="_blank" class="small_search"><span class="name"><span style="font-size: 12px;">• </span>快手菜</span></a>
+                        <a href="recipe_desc3.html?凉菜" target="_blank" class="small_search"><span class="name"><span style="font-size: 12px;">• </span>下饭菜</span></a>
+                        <a href="recipe_desc3.html?主食" target="_blank" class="small_search"><span class="name"><span style="font-size: 12px;">• </span>早餐</span></a>
+                        <a href="recipe_desc3.html?汤" target="_blank" class="small_search"><span class="name"><span style="font-size: 12px;">• </span>凉菜</span></a>
+                        <a href="recipe_desc3.html?早餐" target="_blank" class="small_search"><span class="name"><span style="font-size: 12px;">• </span>素食</span></a>
+                        <a href="recipe_desc3.html?午餐" target="_blank" class="small_search"><span class="name"><span style="font-size: 12px;">• </span>烘焙</span></a>
+                        <a href="recipe_desc3.html?海鲜" target="_blank" class="small_search"><span class="name"><span style="font-size: 12px;">• </span>主食</span></a>
+                        <a href="recipe_desc3.html?孕妇" target="_blank" class="small_search"><span class="name"><span style="font-size: 12px;">• </span>小吃</span></a>
+                        <a href="recipe_desc3.html?甜品" target="_blank" class="small_search"><span class="name"><span style="font-size: 12px;">• </span>红烧肉</span></a>
+                        <a href="recipe_desc3.html?粥" target="_blank" class="small_search"><span class="name"><span style="font-size: 12px;">• </span>可乐鸡翅</span></a>
+                        <a href="recipe_desc3.html?宝宝食谱" target="_blank" class="small_search"><span class="name"><span style="font-size: 12px;">• </span>红烧茄子</span></a>
+                        <a href="recipe_desc3.html?糕点" target="_blank" class="small_search"><span class="name"><span style="font-size: 12px;">• </span>南瓜饼</span></a>
+                        <a href="recipe_desc3.html?微波炉" target="_blank" class="small_search"><span class="name"><span style="font-size: 12px;">• </span>酸菜鱼</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    <footer>
+        <div id="footer">
+            <div class="container">
+                <div class="dginfo">
+                    <div class="footleft">
+                        <div class="footlogo">
+                            <img src="https://cp1.douguo.com//static/nweb/images/logo3.png?20191218" alt="">
+                        </div>
+                        <div class="datainfo">
+                            <p><span>500万+</span>美食菜谱；<span>2000万+</span>互动内容；<span>3000+</span>美食课堂；<span>5000万+</span>用户每天都有新分享</p>
+                        </div>
+                    </div>
+                    <div class="footright">
+                        <h3>扫二维码，下载豆果手机应用：</h3>
+                        <ul>
+                            <li>
+                                <a href="" class=""><img width="92" height="92" src="https://cp1.douguo.com//static/nweb/images/qrcode.png?2001" alt="豆果美食"></a>
+                                <p>豆果美食</p>
+                            </li>
+                            <li>
+                                <a href="" class=""><img width="92" height="92" src="https://cp1.douguo.com//static/nweb/images/xcx.jpg?2001" alt="豆果美食"></a>
+                                <p>微信扫一扫</p>
+                            </li>
+                            <li>
+                                <a href="" class=""><img width="92" height="92" src="https://i1.douguo.com//upload/banner/1578991488.png" alt="豆果美食"></a>
+                                <p>豆果公众号</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footest">
+                    <div class="footlink">
+                        <a href="">关于豆果</a>
+                        <span>·</span>
+                        <a href="">在豆果工作</a>
+                        <span>·</span>
+                        <a href="">意见反馈</a>
+                        <span>·</span>
+                        <a href="">友情链接</a>
+                        <span>·</span>
+                        <a href="">菜谱大全</a>
+                    </div>
+                    <div class="cght" style="text-align: center;">
+                        <a href="https://www.douguo.com" target="_blank">北京豆果信息技术有限公司</a>
+                        <span>京ICP证111032号</span>
+                        <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502038268">
+                            <img src="https://i1.douguo.com//upload/banner/1564469142.png" lazysrc="" style="margin-bottom: -3px;width:20px"> 京公网安备 11010502038268号
+                        </a>
+                        <a target="_blank" href="http://beian.miit.gov.cn">京ICP备09012748号</a>
+                        <p style="margin:5px 0;cursor: pointer;" onclick="$('.smask2').show();$('.medicinal_box').show();">互联网药品信息服务资格证书</p>
+                        <a href="http://sq.ccm.gov.cn/ccnt/sczr/doLogin" target="_blank">
+                            <img src="https://i1.douguo.com//upload/banner/1522057799.png" style="margin-bottom: -3px;width:20px"> 京网文【2017】6954-770号
+                        </a> 食品流通许可证SP1101061510252413
+                        <a href="javascript:void(0);" style="display:block;text-align:center;margin-top:5px;" onclick="$('.smask2').show();$('.tvbox').show();">广播电视节目制作经营许可证（京）字第11624号</a>
+                        <div class="smask2" style="position:fixed;width:100%;height:100%;top:0;left:0;background: black;z-index:999;display: none;opacity: .6;filter: alpha(opacity=60)"></div>
+                        <div class="tvbox" style="position: fixed;top:50%;left:50%;z-index:1000;margin-left:-350px;margin-top:-250px;display: none;">
+                            <img src="https://i1.douguo.com//upload/banner/1551092008.jpg" alt="">
+                            <img style="position: absolute;top:15px;right:15px;cursor: pointer;" src="https://cp1.douguo.com/static/nweb/images/close.png" alt="" onclick="$('.smask2').hide();$('.tvbox').hide();">
+                        </div>
+                        <div class="medicinal_box" style="position: fixed;top:50%;left:50%;z-index:1000;margin-left:-350px;margin-top:-250px;display: none;">
+                            <img style="display:block;width:700px;" src="https://i1.douguo.com//upload/banner/1577185524.jpg" alt="">
+                            <img style="position: absolute;top:15px;right:15px;cursor: pointer;" src="https://cp1.douguo.com/static/nweb/images/close.png" alt="" onclick="$('.smask2').hide();$('.medicinal_box').hide();">
+                        </div>
+                    </div>
+                    <div class="fans">
+                        <a href=""><img height="22px" src="../public/img/footimg.png" alt=""></a>
+                        <a href=""><img height="22px" src="https://i1.douguo.com/upload/banner/1528470330.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    var h1 = document.getElementById('maintitle');
+    var str = decodeURI(decodeURI(window.location.search.split('?')[1]));
+    // var str = window.location.search.split('?')[1];
+    h1.innerHTML = "\"" + str + "\"" + "的相关菜谱"
+
+    $('.prev').css('display', "none")
+    $('.ali').click(function() {
+        page = $(this).html()
+        judge(page)
+    })
+    $('.prev').click(function() {
+        if (page == 1) {
+            judge(page)
+        } else {
+            page--;
+            judge(page)
+        }
+    })
+    $('.next').click(function() {
+        if (page == 4) {
+            judge(page)
+        } else {
+            page++;
+            judge(page)
+        }
+    })
+    $('.first').click(function() {
+        judge(1)
+    })
+    $('.last').click(function() {
+        judge(4)
+    })
+
+    function judge(page) {
+        $('.ali').eq(page - 1).addClass('active').siblings().removeClass('active')
+        if (page == 1) {
+            $('.prev').css('display', "none")
+        }
+        if (page > 1) {
+            $('.prev').css('display', 'block')
+            $('.prev').html('上一页')
+        }
+        getData(page)
+    }
+</script>
+
+</html>

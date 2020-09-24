@@ -1,0 +1,66 @@
+.headlist li:nth-child(6) a {
+    color: #FFB31A;
+    font-weight: bold;
+    border-bottom: 2px solid #FFB31A;
+}
+
+.headlist li:nth-child(1) a {
+    color: #333;
+    font-weight: bold;
+    border-bottom: none;
+}
+
+.main {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+article {
+    overflow: hidden;
+}
+
+.box {
+    float: left;
+    width: 690px;
+}
+
+h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+    height: 22px;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ffaa00;
+}
+
+.floor {
+    color: #333;
+    margin-top: 80px;
+}
+
+.box img {
+    width: 498px;
+}
+
+.box_right {
+    float: right;
+    margin: 0;
+    padding: 0;
+    width: 280px;
+    list-style-type: none;
+}
+
+.box_right li {
+    height: 34px;
+    color: #333;
+    line-height: 34px;
+    font-size: 14px;
+}

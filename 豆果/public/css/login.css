@@ -1,0 +1,144 @@
+body {
+    background: #f8f8f7;
+}
+
+.fl {
+    float: left;
+}
+
+.clear::after,
+.clear::before {
+    display: block;
+    content: '';
+    clear: both;
+    overflow: hidden;
+}
+
+html,
+body,
+p {
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+header {
+    margin-bottom: 40px;
+    background-color: #fff;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+.head {
+    width: 940px;
+    height: 90px;
+    margin: 0 auto;
+}
+
+.head a {
+    display: block;
+}
+
+.head a img {
+    margin: 20px 0 0 15px;
+}
+
+.main {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 940px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.main-right {
+    width: 312px;
+    margin-right: 20px;
+}
+
+input {
+    outline: 0;
+    border-radius: 5px;
+}
+
+input:focus {
+    border-color: rgba(82, 168, 236, 0.8);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6)
+}
+
+.ipt {
+    outline: 0;
+    width: 300px;
+    height: 28px;
+    line-height: 28px;
+    font-size: 14px;
+    padding: 5px 0px 5px 10px;
+    border: 1px solid #deded3;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.protocol {
+    margin-bottom: 20px;
+}
+
+.protocol p {
+    color: #999;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.protocol span {
+    color: #3ea000;
+}
+
+#submit {
+    padding: 0;
+    text-align: center;
+    line-height: 42px;
+    font-size: 14px;
+    background: #ffb31a;
+    width: 310px;
+    height: 42px;
+    color: #141414;
+    cursor: pointer;
+    border-color: #ffb31a;
+    border-width: 0;
+}
+
+footer {
+    margin: 78px auto 0;
+    width: 940px;
+    text-align: center;
+    font-size: 12px;
+}
+
+footer div {
+    color: #6b553f;
+    margin-bottom: 20px;
+}
+
+footer p {
+    color: #999;
+}
+
+.hints {
+    position: absolute;
+    top: 2px;
+    right: 50px;
+    height: 32px;
+    line-height: 36px;
+    font-size: 12px;
+    color: red;
+    display: none;
+}
+
+.ipts {
+    position: relative;
+}

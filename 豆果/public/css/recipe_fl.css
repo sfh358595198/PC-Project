@@ -1,0 +1,93 @@
+@charset "UTF-8";
+.headlist li:nth-child(2)>a {
+    color: #FFB31A;
+    font-weight: bold;
+    border-bottom: 2px solid #FFB31A;
+}
+
+.headlist li:nth-child(2)>a span:last-child {
+    background: url(https://cp1.douguo.com/static/nweb/images/share-more.png);
+}
+
+.type-tab {
+    height: 45px;
+    line-height: 45px;
+    margin: 11px 0px 25px;
+}
+
+.type-head {
+    width: 290px;
+}
+
+.type-head a {
+    float: left;
+    margin-right: 30px;
+    font-size: 14px;
+    color: #000;
+}
+
+.type-head a:nth-child(3) {
+    border-bottom: 2px solid #383830;
+    font-weight: bold;
+    color: #383830;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.bigtitle {
+    font-size: 20px;
+    color: #333;
+    line-height: 20px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.smalltitle {
+    font-size: 16px;
+    color: #333;
+    line-height: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 15px;
+}
+
+.listbox .list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.listbox .list li {
+    width: 142px;
+    line-height: 16px;
+    font-size: 14px;
+}
+
+.listbox .list li a {
+    display: block;
+    color: #256DC6;
+    padding-right: 10px;
+    padding-bottom: 15px;
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.listbox .list .itemmore {
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+    margin: 15px 477px 0;
+    line-height: 16px;
+    font-size: 14px;
+    color: #ffb31a;
+}
+
+.itemmore span img {
+    width: 13px;
+    vertical-align: middle;
+}

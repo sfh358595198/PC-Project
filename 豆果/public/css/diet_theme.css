@@ -1,0 +1,194 @@
+.clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+
+.headlist li:nth-child(3)>a {
+    color: #FFB31A;
+    font-weight: bold;
+    border-bottom: 2px solid #FFB31A;
+}
+
+.headlist li:nth-child(3)>a span:last-child {
+    background: url(https://cp1.douguo.com/static/nweb/images/share-more.png);
+}
+
+article {
+    width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.type-tab {
+    width: 1000px;
+    height: 45px;
+    margin-bottom: 25px;
+    padding-top: 11px;
+}
+
+.type-header {
+    font-size: 14px;
+    text-align: center;
+    width: auto;
+    margin: 0 auto;
+    display: inline-block;
+}
+
+.type-header a:hover {
+    color: #FFB31A;
+}
+
+.type-header .active:hover {
+    color: #FFB31A;
+}
+
+.type-header a {
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+    display: inline-block;
+    color: #383830;
+    height: 42px;
+    line-height: 42px;
+    margin-right: 30px;
+}
+
+.type-header a.active {
+    border-bottom: 2px solid #383830;
+    font-weight: bold;
+    color: #383830;
+}
+
+#left-site {
+    width: 710px;
+    float: left;
+}
+
+#right-site {
+    width: 280px;
+    float: right;
+    /* outline: 1px solid red; */
+}
+
+#allsite {
+    float: left;
+}
+
+.search.sput {
+    float: left;
+    width: 162px;
+    height: 16px;
+    padding: 7px 10px;
+    border: none;
+    outline: none;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    background: #F7F7F7;
+    color: #999;
+    font-size: 12px;
+}
+
+#allsite .asone {
+    position: relative;
+    width: 315px;
+    padding-top: 15px;
+    display: inline-block;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(100, 100, 100, .3);
+    -moz-box-shadow: 0 1px 3px rgba(100, 100, 100, .3);
+    -webkit-box-shadow: 0 1px 3px rgba(100, 100, 100, .3);
+    margin: 0 40px 40px 0;
+    cursor: pointer;
+}
+
+#allsite .asone {
+    width: 315px;
+    height: 140px;
+    float: left;
+}
+
+.asone .aspc {
+    float: left;
+    margin: 0 15px 15px 15px;
+    width: 70px;
+    height: 70px;
+}
+
+.aspc a img {
+    width: 70px;
+    height: 70px;
+}
+
+#allsite .asone h3 {
+    width: 210px;
+    overflow: hidden;
+    padding-bottom: 3px;
+    font-size: 14px;
+    height: 20px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.asone a {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+#allsite .asone p {
+    font-size: 12px;
+    color: #999;
+    line-height: 160%;
+    float: left;
+    width: 210px;
+    height: 40px;
+    overflow: hidden;
+}
+
+#allsite .asone .allthe {
+    width: 315px;
+    height: 40px;
+    background: #fafafa;
+    border-top: 1px solid #f6f6f6;
+    float: left;
+    text-align: right;
+    font-size: 12px;
+}
+
+#allsite .asone .allthe span {
+    line-height: 40px;
+    padding-right: 20px;
+}
+
+.catelink {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.fcc {
+    font-size: 13px;
+    color: #333;
+    line-height: 13px;
+    padding: 80px 0 10px;
+}
+
+.fcc a {
+    color: #333;
+}

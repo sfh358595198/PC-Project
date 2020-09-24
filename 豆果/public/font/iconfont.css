@@ -1,0 +1,37 @@
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1599405200310'); /* IE9 */
+  src: url('iconfont.eot?t=1599405200310#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAPYAAsAAAAACFwAAAOMAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDSAqDWIMlATYCJAMYCw4ABCAFhG0HTxtSBxEVnPvIfh7YtvBsdGt9rOhpPhrJSLPPwfOf3dd9VdU9/TECstVoCfcCjKCQERxJvYDCDff8zbke2KgINXI/++TRt11Kg+yy9CEAipX+f+7n88oaLO/a5hJZ1m2Pdkabjgc0sIj+UWT7IB/I/zK3Datouz/lNATwk0EZ0tyuSx8cDHSSADJl4viROC0rZqZUcBDskZUG2Y6Fozaou8C2/PflNzXigMLS0LN6jGs7hvpv9rcH2g25DNEu7nluwF0HGigDDMiSUe88dBkvQ+OP+xs6AUEcFOasZ9R/G/Bt47cHoVBLSYNCkMVBYZ33j2dAbEhxEIAumLDgmy0EUPCtXjqmG4ACaPi2UQCBbw/k/8honyghBYuAO1B8HjM1goVCLMskRUUZ+MyEoL3YHj0ybMGoEVZkH78EFnte9rNn/b0XfR8/S7zp8fRp3+fP+z97tjACzf2sSh3ZO9t43qKDVwoijl1KMgcu50eevJo6LZIITbJm+xNOPZe1bs/r41Ztet4inr69R3XEe8U4w/OGjx3ff8w4/+x6d8AjxuHq3MKCc5/4r1tjasZQNWtZn/S6uTNbdE64rJZdGJLZ0e4pmRvtbnXLG9TBG/d2ahApUTnT9G6/njpct6dMniw9XS7SbT2lNU5yW/trD7mHav1uXrT8Ki71YjZ787MuPszuV62m7dw5TU1XSq0cEe42XVX1y864lHXz5qXzN7syZqx0lS4glhQZO1bVFe/gxfiC7vnd9wUu/7/ynw6A0DU9UNfnw6/oQboBQI9UH8F/Vc017L8hv3Onc8MjW/5zAgaA14vTt2NdyDVoF0xMx2qZ0cpWNphEQW22iZDFXghgU4YFgAL8rAUMNBjDu7P08aujIDgtmQuKMNJB45CHMrgysAhQBzYObcBPKe3XB4hlFhoxPqCENQBCFKdAEcFV0ERxD2Vwb8Eigb9gEyUa/PST2B0DFFAkHE6MSrAB/YdgaLDcIYei9I4udYqbipz6Rp5CCMqs6KZuOCCfMWf6uErEgmXq4QrnYdcRjEwRjWReZKzz3I79UGaonx04MSrBBtB/IBgarOosh97z7+hSp3gGMRZ+I0+hd6Ako1iBummHVYhvecv0cRUiFrBMPXAFN3YsTsA4PiyikQy/IzrW5KSZXavN7tf3X7kL8EM/yRYlWoxYYksYyznKLX2iVY9DWqtQlcfDL6jIcwahNJsB') format('woff2'),
+  url('iconfont.woff?t=1599405200310') format('woff'),
+  url('iconfont.ttf?t=1599405200310') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1599405200310#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-tag:before {
+  content: "\e68a";
+}
+
+.icon-huo:before {
+  content: "\e606";
+}
+
+.icon-menu:before {
+  content: "\e658";
+}
+
+.icon-ai219:before {
+  content: "\e6cf";
+}
+
+.icon-xiajiantou:before {
+  content: "\e640";
+}
+

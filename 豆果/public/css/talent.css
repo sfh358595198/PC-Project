@@ -1,0 +1,220 @@
+* {
+    box-sizing: border-box;
+}
+
+article {
+    overflow: hidden;
+}
+
+.mt30 {
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.des-title h3 {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 42px;
+}
+
+.condition {
+    padding-bottom: 40px;
+}
+
+.condition p {
+    font-size: 15px;
+    line-height: 27px;
+}
+
+.left {
+    width: 690px;
+    float: left;
+}
+
+.condition h4 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 20px;
+    margin-top: 25px;
+}
+
+.right {
+    width: 280px;
+    float: right;
+}
+
+.join-us a {
+    display: inline-block;
+    width: 100%;
+    height: 42px;
+    background: #FFB31A;
+    color: #ffffff;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 6px;
+    line-height: 42px;
+}
+
+.gourmet-list {
+    width: 100%;
+    padding-top: 20px;
+    border-top: 1px solid #E5E3DF;
+}
+
+.type-head {
+    font-size: 14px;
+    text-align: center;
+    width: auto;
+    margin: 0 auto;
+    display: inline-block;
+}
+
+.type-head a {
+    display: inline-block;
+    color: #383830;
+    height: 42px;
+    line-height: 42px;
+    margin-right: 30px;
+    /* float: left; */
+    box-sizing: border-box;
+}
+
+.type-head a:hover {
+    color: #ffaa00!important;
+}
+
+.type-head a.active {
+    border-bottom: 2px solid #383830;
+    font-weight: bold;
+    color: #383830;
+}
+
+.list {
+    padding: 30px 0 10px;
+    display: flex;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+}
+
+.list li {
+    width: 236px;
+    margin-right: 146px;
+    margin-bottom: 40px;
+}
+
+.list li:nth-child(3n) {
+    margin-right: 0;
+}
+
+.user-img {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    margin-left: 6px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.user-img img {
+    width: 100%;
+}
+
+.list-left {
+    width: 80px;
+    font-size: 0;
+    margin-right: 10px;
+    float: left;
+}
+
+.fav-btn {
+    display: inline-block;
+    width: 80px;
+    margin-top: 14px;
+    height: 30px;
+    line-height: 28px;
+    border-radius: 4px;
+    border: 1px solid #333;
+    color: #333;
+    font-size: 12px;
+    text-align: center;
+}
+
+.addicon {
+    font-size: 14px;
+}
+
+.list-right {
+    width: 137px;
+    margin-right: 9px;
+    float: right;
+}
+
+.list-right h3 {
+    font-size: 15px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-top: 6px;
+}
+
+.list-right .nickname {
+    display: inline-block;
+    max-width: 110px;
+    vertical-align: middle;
+    color: #333;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+.proicon {
+    margin-left: 3px;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.proicon img {
+    display: block;
+    width: 100%;
+}
+
+.list-right p {
+    margin-top: 24px;
+    font-size: 13px;
+    line-height: 18px;
+    color: #999;
+}
+
+.pages {
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    height: 26px;
+}
+
+.pages li,
+.pages a {
+    display: inline-block;
+    padding: 2px 6px 3px;
+    background: #fff;
+    color: #333;
+    box-sizing: border-box;
+    margin: 0 7px;
+    border: 1px solid #333;
+    font-size: 14px;
+    border-radius: 4px;
+    height: 100%;
+    line-height: 22px;
+    cursor: pointer;
+}
+
+.ali.active {
+    background: #FFB31A;
+    color: #fff;
+    border: 1px solid #FFB31A;
+}

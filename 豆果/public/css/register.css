@@ -1,0 +1,207 @@
+body {
+    background: #f8f8f7;
+}
+
+.fl {
+    float: left;
+}
+
+.clear::after,
+.clear::before {
+    display: block;
+    content: '';
+    clear: both;
+    overflow: hidden;
+}
+
+html,
+body,
+p {
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+header {
+    margin-bottom: 40px;
+    background-color: #fff;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+.head {
+    width: 940px;
+    height: 90px;
+    margin: 0 auto;
+}
+
+.head a {
+    display: block;
+}
+
+.head a img {
+    margin: 20px 0 0 15px;
+}
+
+.main {
+    width: 940px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.mian-title {
+    height: 58px;
+    align-items: center;
+    padding-left: 32px;
+    padding-right: 22px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    border-bottom: 1px solid #f8f8f7;
+}
+
+.text {
+    font-size: 16px;
+}
+
+input {
+    outline: 0;
+    border-radius: 5px;
+}
+
+input:focus {
+    border-color: rgba(82, 168, 236, 0.8);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6)
+}
+
+.text a {
+    color: #3ea000;
+}
+
+.main-form {
+    width: 610px;
+    margin: 30px 0 0 320px;
+}
+
+.ipt {
+    outline: 0;
+    width: 300px;
+    height: 28px;
+    line-height: 28px;
+    font-size: 14px;
+    padding: 5px 0px 5px 10px;
+    border: 1px solid #deded3;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.hint {
+    visibility: hidden;
+    font-size: 12px;
+    height: 22px;
+    color: #999;
+}
+
+.verify {
+    height: 34px;
+}
+
+.verify-ipt {
+    width: 105px;
+    height: 22px;
+    line-height: 22px;
+    padding: 5px 0px 5px 15px;
+    font-size: 12px;
+    border: 1px solid #deded3;
+    background: #fff;
+}
+
+.hints,
+#txt {
+    height: 32px;
+    line-height: 36px;
+    font-size: 12px;
+    color: red;
+}
+
+.notarize {
+    margin-top: 8px;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background: url(https://passport.douguo.com/public/img/web/loicon.png) no-repeat;
+    background-position: -2px -21px;
+}
+
+.hints {
+    display: none;
+}
+
+#num {
+    letter-spacing: 10px;
+    font-family: '楷体';
+    font-style: italic;
+    height: 34px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 110px;
+    line-height: 34px;
+    border: 1px solid #deded3;
+    background-color: #e6e6e6;
+    text-align: center;
+    margin-left: 80px;
+    cursor: pointer;
+}
+
+#txt {
+    margin-bottom: 17px;
+}
+
+.protocol {
+    margin-bottom: 20px;
+}
+
+.protocol p {
+    color: #999;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.protocol span {
+    color: #3ea000;
+}
+
+#submit {
+    padding: 0;
+    text-align: center;
+    line-height: 42px;
+    font-size: 14px;
+    background: #ffb31a;
+    width: 310px;
+    height: 42px;
+    color: #fff;
+    cursor: pointer;
+    border-color: #ffb31a;
+    border-width: 0;
+}
+
+footer {
+    margin: 78px auto 0;
+    width: 940px;
+    text-align: center;
+    font-size: 12px;
+}
+
+footer div {
+    color: #6b553f;
+    margin-bottom: 20px;
+}
+
+footer p {
+    color: #999;
+}

@@ -1,0 +1,44 @@
+{
+  "id": "2044725",
+  "name": "douguo",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1982461",
+      "name": "标签",
+      "font_class": "tag",
+      "unicode": "e68a",
+      "unicode_decimal": 59018
+    },
+    {
+      "icon_id": "2681693",
+      "name": "火",
+      "font_class": "huo",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "6145588",
+      "name": "menu",
+      "font_class": "menu",
+      "unicode": "e658",
+      "unicode_decimal": 58968
+    },
+    {
+      "icon_id": "999120",
+      "name": "放大镜",
+      "font_class": "ai219",
+      "unicode": "e6cf",
+      "unicode_decimal": 59087
+    },
+    {
+      "icon_id": "1440920",
+      "name": "下箭头",
+      "font_class": "xiajiantou",
+      "unicode": "e640",
+      "unicode_decimal": 58944
+    }
+  ]
+}
