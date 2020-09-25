@@ -133,7 +133,7 @@ fetch("http://localhost:8080/mall").then((response) => {
     // console.log(res.data);
     for (var i = 0; i < 3; i++) {
         mlist.innerHTML += `<li>
-                              <a hret="#">
+                              <a href="mall_desc.html">
                                   <img src="${res.data[i].img}" alt="">
                                   <p>${res.data[i].title}</p>
                                   </a>
@@ -153,9 +153,11 @@ fetch("http://localhost:8080/works").then((response) => {
     for (var i = 0; i < res.data.length; i++) {
         works.innerHTML += `<li>
                                     <div class="l-works">
-                                    <a hret="#"> <img width="110px" src="${res.data[i].img}" alt=""></a>
+                                    <a href="recipe_desc1.html"> 
+                                    <img width="110px" src="${res.data[i].img}" alt="">
+                                    </a>
                                       <div class="n-works">
-                                      <a href="#">
+                                      <a href="note.html">
                                         <p>${res.data[i].name}</p>
                                       <span>${res.data[i].name1} </span>
                                       </a>
