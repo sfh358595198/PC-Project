@@ -142,7 +142,7 @@
                     <li><a href="comic.html">动漫</a></li>
                 </ul>
                 <div class="search">
-                    <input type="text" placeholder="搜索菜谱、菜单、食材、用户" id="search"><input type="text">
+                    <input type="text" placeholder="搜索菜谱、菜单、食材、用户" id="search"><input type="text" id="btn">
                     <div class="preshow">
                         <li class="item"><a href="recipe_desc3.html?减肥餐">1.减肥餐</a></li>
                         <li class="item"><a href="recipe_desc3.html?家常菜">2.家常菜</a></li>
@@ -158,7 +158,24 @@
                 </div>
                 <script>
                     var ipt = document.getElementById('search');
+                    var btn = document.getElementById('btn')
                     var preshow = document.querySelector('.preshow');
+                    btn.onclick=function(){
+                        if(ipt.value){
+                            window.location.href='recipe_desc3.html?'+ipt.value;
+                            ipt.value=''
+                        }else{
+                            ipt.value="搜索菜谱、菜单、食材、用户"
+                        }
+                    }
+                    ipt.onkeydown=function(e){
+                        if(e.keyCode==13&&ipt.value){
+                            window.location.href='recipe_desc3.html?'+ipt.value;
+                            ipt.value=''
+                        }else{
+                            ipt.value="搜索菜谱、菜单、食材、用户"
+                        }
+                    }
                     ipt.onfocus = function() {
                         this.placeholder = '';
                         preshow.style.display = 'block';
