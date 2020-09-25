@@ -20,7 +20,7 @@ submit.onclick = function() {
             if (res == "账号不存在") {
                 alert(res)
             } else {
-                window.location.href = '../view/index.html' //跳转主页的地方
+                window.location.href = 'homeTow.html' //跳转主页的地方
             }
         })
     }
