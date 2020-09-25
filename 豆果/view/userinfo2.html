@@ -372,20 +372,16 @@
                     var ipt = document.getElementById('search');
                     var btn = document.getElementById('btn')
                     var preshow = document.querySelector('.preshow');
-                    btn.onclick=function(){
-                        if(ipt.value){
-                            window.location.href='recipe_desc3.html?'+ipt.value;
-                            ipt.value=''
-                        }else{
-                            ipt.value="搜索菜谱、菜单、食材、用户"
+                    btn.onclick = function() {
+                        if (ipt.value) {
+                            window.location.href = 'recipe_desc3.html?' + ipt.value;
+                            ipt.value = ''
                         }
                     }
-                    ipt.onkeydown=function(e){
-                        if(e.keyCode==13&&ipt.value){
-                            window.location.href='recipe_desc3.html?'+ipt.value;
-                            ipt.value=''
-                        }else{
-                            ipt.value="搜索菜谱、菜单、食材、用户"
+                    ipt.onkeydown = function(e) {
+                        if (e.keyCode == 13 && ipt.value) {
+                            window.location.href = 'recipe_desc3.html?' + ipt.value;
+                            ipt.value = ''
                         }
                     }
                     ipt.onfocus = function() {
@@ -442,15 +438,15 @@
             </div>
             <div class="cyh-infoRight">
                 <div class="cyh-userFans">
-                    
-                       
-                       <a href="fllow.html"> 
+
+
+                    <a href="fllow.html">
                         <div class="cyh-fansItem">
-                        <p style="margin-bottom: 5px;font-size: 15px;">0</p>
-                           <p>关注</p>
+                            <p style="margin-bottom: 5px;font-size: 15px;">0</p>
+                            <p>关注</p>
                         </div>
-                        </a> 
-                  
+                    </a>
+
                     <div class="cyh-fansItem">
                         <p style="margin-bottom: 5px;font-size: 15px;">0</p>
                         <p>粉丝</p>

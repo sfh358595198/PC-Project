@@ -160,20 +160,16 @@
                     var ipt = document.getElementById('search');
                     var btn = document.getElementById('btn')
                     var preshow = document.querySelector('.preshow');
-                    btn.onclick=function(){
-                        if(ipt.value){
-                            window.location.href='recipe_desc3.html?'+ipt.value;
-                            ipt.value=''
-                        }else{
-                            ipt.value="搜索菜谱、菜单、食材、用户"
+                    btn.onclick = function() {
+                        if (ipt.value) {
+                            window.location.href = 'recipe_desc3.html?' + ipt.value;
+                            ipt.value = ''
                         }
                     }
-                    ipt.onkeydown=function(e){
-                        if(e.keyCode==13&&ipt.value){
-                            window.location.href='recipe_desc3.html?'+ipt.value;
-                            ipt.value=''
-                        }else{
-                            ipt.value="搜索菜谱、菜单、食材、用户"
+                    ipt.onkeydown = function(e) {
+                        if (e.keyCode == 13 && ipt.value) {
+                            window.location.href = 'recipe_desc3.html?' + ipt.value;
+                            ipt.value = ''
                         }
                     }
                     ipt.onfocus = function() {
@@ -211,7 +207,7 @@
                     <li>厨房清理</li>
                 </ul>
             </div>
-            <div class="floor">你当前的位置:<a href="">豆果美食</a>>动漫</div>
+            <div class="floor">你当前的位置:<a href="index.html">豆果美食</a>>动漫</div>
         </div>
     </article>
     <footer>

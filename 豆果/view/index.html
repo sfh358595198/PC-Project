@@ -161,20 +161,16 @@
                     var ipt = document.getElementById('search');
                     var btn = document.getElementById('btn')
                     var preshow = document.querySelector('.preshow');
-                    btn.onclick=function(){
-                        if(ipt.value){
-                            window.location.href='recipe_desc3.html?'+ipt.value;
-                            ipt.value=''
-                        }else{
-                            ipt.value="搜索菜谱、菜单、食材、用户"
+                    btn.onclick = function() {
+                        if (ipt.value) {
+                            window.location.href = 'recipe_desc3.html?' + ipt.value;
+                            ipt.value = ''
                         }
                     }
-                    ipt.onkeydown=function(e){
-                        if(e.keyCode==13&&ipt.value){
-                            window.location.href='recipe_desc3.html?'+ipt.value;
-                            ipt.value=''
-                        }else{
-                            ipt.value="搜索菜谱、菜单、食材、用户"
+                    ipt.onkeydown = function(e) {
+                        if (e.keyCode == 13 && ipt.value) {
+                            window.location.href = 'recipe_desc3.html?' + ipt.value;
+                            ipt.value = ''
                         }
                     }
                     ipt.onfocus = function() {
@@ -345,7 +341,7 @@
                     </div>
                     <ul class="ment">
                         <li> <span class="posint"></span><a href="a.html"> 智能找菜</a></li>
-                       <li> <span class="posint"></span> <a href="ceshiti.html">豆果测试题</a> </li>
+                        <li> <span class="posint"></span> <a href="ceshiti.html">豆果测试题</a> </li>
                         <li> <span class="posint"></span> 药品</li>
                     </ul>
                 </div>
@@ -354,15 +350,27 @@
                         <h1 class="r-title claerfix">动漫</h1>
                     </div>
                     <ul class="ment">
-                       
-                          <a href="comic_desc.html?id=6"><li> <span class="posint"></span> 午饭的诱惑</li></a> 
-                          <a href="comic_desc.html?id=5"><li> <span class="posint"></span> 暖暖的晚餐</li></a>  
-                          <a href="comic_desc.html?id=4"> <li> <span class="posint"></span> 汤圆-夜宵</li></a> 
-                          <a href="comic_desc.html?id=3"> <li><span class="posint"></span> 好吃的面</li></a>  
-                          <a href="comic_desc.html?id=2"><li> <span class="posint"></span> 绿色的早餐</li></a>   
-                          <a href="comic_desc.html?id=20"> <li> <span class="posint"></span> 蜂蜜厚多士</li></a>  
-                       
-                    
+
+                        <a href="comic_desc.html?id=6">
+                            <li> <span class="posint"></span> 午饭的诱惑</li>
+                        </a>
+                        <a href="comic_desc.html?id=5">
+                            <li> <span class="posint"></span> 暖暖的晚餐</li>
+                        </a>
+                        <a href="comic_desc.html?id=4">
+                            <li> <span class="posint"></span> 汤圆-夜宵</li>
+                        </a>
+                        <a href="comic_desc.html?id=3">
+                            <li><span class="posint"></span> 好吃的面</li>
+                        </a>
+                        <a href="comic_desc.html?id=2">
+                            <li> <span class="posint"></span> 绿色的早餐</li>
+                        </a>
+                        <a href="comic_desc.html?id=20">
+                            <li> <span class="posint"></span> 蜂蜜厚多士</li>
+                        </a>
+
+
                     </ul>
                 </div>
             </div>

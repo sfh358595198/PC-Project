@@ -160,20 +160,16 @@
                     var ipt = document.getElementById('search');
                     var btn = document.getElementById('btn')
                     var preshow = document.querySelector('.preshow');
-                    btn.onclick=function(){
-                        if(ipt.value){
-                            window.location.href='recipe_desc3.html?'+ipt.value;
-                            ipt.value=''
-                        }else{
-                            ipt.value="搜索菜谱、菜单、食材、用户"
+                    btn.onclick = function() {
+                        if (ipt.value) {
+                            window.location.href = 'recipe_desc3.html?' + ipt.value;
+                            ipt.value = ''
                         }
                     }
-                    ipt.onkeydown=function(e){
-                        if(e.keyCode==13&&ipt.value){
-                            window.location.href='recipe_desc3.html?'+ipt.value;
-                            ipt.value=''
-                        }else{
-                            ipt.value="搜索菜谱、菜单、食材、用户"
+                    ipt.onkeydown = function(e) {
+                        if (e.keyCode == 13 && ipt.value) {
+                            window.location.href = 'recipe_desc3.html?' + ipt.value;
+                            ipt.value = ''
                         }
                     }
                     ipt.onfocus = function() {
@@ -251,7 +247,7 @@
                         <a>MCN机构</a>
                     </div>
                     <ul class="list">
-                  
+
                     </ul>
                     <div class="pages">
                         <div class="pages">
@@ -345,16 +341,15 @@
     <script src="../public/js/talent.js"></script>
 </body>
 <script>
+    var lists = document.querySelector('.list')
 
-var lists = document.querySelector('.list')
-
-function getData(tab = "'全部'", num = 1) {
-    $.get(`http://localhost:8080/daren?tab=${tab}&page=${num}`, function(res) {
-        var data = res.data
-        console.log(data);
-        lists.innerHTML = ""
-        for (var i = 0; i < data.length; i++) {
-            lists.innerHTML += `
+    function getData(tab = "'全部'", num = 1) {
+        $.get(`http://localhost:8080/daren?tab=${tab}&page=${num}`, function(res) {
+            var data = res.data
+            console.log(data);
+            lists.innerHTML = ""
+            for (var i = 0; i < data.length; i++) {
+                lists.innerHTML += `
                 <li class="clearfix">
             <div class="list-left">
               <a href="" class="user-img">
@@ -375,38 +370,39 @@ function getData(tab = "'全部'", num = 1) {
             </div>
           </li>
                 `
-        }
-        var nav5 = document.querySelectorAll('.list .addicon')
-        console.log(888,nav5)
-        for (var j = 0; j < nav5.length; j++) {
+            }
+            var nav5 = document.querySelectorAll('.list .addicon')
+            console.log(888, nav5)
+            for (var j = 0; j < nav5.length; j++) {
 
-            nav5[j].onclick = function(e) {
+                nav5[j].onclick = function(e) {
 
-                var navs=e.target.innerHTML
-                console.log( navs == '+关注')
-                var index1 = parseInt(e.target.dataset.index) + 1
-                if ( e.target.innerHTML == '+关注') {
-                   
-                    e.target.innerHTML = '已关注'
-                    
-                    fetch("http://localhost:8080/follow1?id=" + index1).then((response) => {
-                        return response.json()
-                    }).then((res) => {
-                        console.log(res)
-                    })
-                } else if (e.target.innerHTML == '已关注') {
-                    e.target.innerHTML = '+关注'
-                    fetch("http://localhost:8080/follow2?id=" + index1).then((response) => {
-                        return response.json()
-                    }).then((res) => {
-                        console.log(res)
-                    })
+                    var navs = e.target.innerHTML
+                    console.log(navs == '+关注')
+                    var index1 = parseInt(e.target.dataset.index) + 1
+                    if (e.target.innerHTML == '+关注') {
+
+                        e.target.innerHTML = '已关注'
+
+                        fetch("http://localhost:8080/follow1?id=" + index1).then((response) => {
+                            return response.json()
+                        }).then((res) => {
+                            console.log(res)
+                        })
+                    } else if (e.target.innerHTML == '已关注') {
+                        e.target.innerHTML = '+关注'
+                        fetch("http://localhost:8080/follow2?id=" + index1).then((response) => {
+                            return response.json()
+                        }).then((res) => {
+                            console.log(res)
+                        })
+                    }
                 }
             }
-        }
-        
-    })
-}
-getData()
+
+        })
+    }
+    getData()
 </script>
+
 </html>

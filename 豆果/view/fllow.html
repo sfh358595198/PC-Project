@@ -1,234 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="../public/css/reset.css">
     <link rel="stylesheet" href="../public/css/common.css">
     <style>
-      * {
-        box-sizing: border-box;
-      }
-      #cyh-content a {
-        text-decoration: none;
-      }
-
-      #cyh-content a:hover {
-        text-decoration: none;
-      }
-      #cyh-content {
-        width: 1000px;
-        margin: 0 auto;
-      }
-      .cyh-tab {
-        width: 100%;
-        margin-top: 15px;
-      }
-      .cyh-tabList {
-        margin-top: 15px;
-        font-size: 14px;
-        text-align: center;
-        width: 100%;
-        margin: 0 auto;
-        display: flex;
-      }
-      .cyh-tabItem {
-        color: #383830;
-        height: 42px;
-        line-height: 42px;
-        margin-right: 30px;
-      }
-      .cyh-tabItem:hover {
-        color: #ffaa00;
-      }
-      .cyh-active {
-        border-bottom: 2px solid #383830;
-        font-weight: bold;
-        color: #383830;
-      }
-      .cyh-conList {
-        min-height: 400px;
-        margin-top: 10px;
-      }
-      .cyh-conItem {
-        width: 1000px;
-        text-align: center;
-        font-size: 15px;
-        margin-top: 150px;
-        display: none;
-      }
-      .cyh-active {
-        border-bottom: 2px solid #383830;
-        font-weight: bold;
-        color: #383830;
-      }
-      .cyh-conActive {
-        display: block;
-      }
-      .cyh-text-lips {
-        font-size: 13px;
-        color: #333;
-        line-height: 13px;
-        padding: 35px 0 10px;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
-      }
-      .cyh-text-lips a {
-        color: #333;
-        text-decoration: none;
-      }
-      .cyh-text-lips a:hover {
-        color: #ffaa00;
-      }
-      .cyh-text-lips a:visited {
-        color: #ffaa00;
-      }
-      .cyh-userInfo {
-        margin: 40px 0 20px;
-        padding-bottom: 40px;
-        display: flex;
-        justify-items: center;
-      }
-      .cyh-userImg {
-        background: url("https://tx1.douguo.com/upload/photo/1/1/1/140_3e722480ce22148d611912fb1e7f1dcb.png")
-          no-repeat center center;
-        background-size: cover;
-        display: inline-block;
-        width: 120px;
-        height: 120px;
-        margin-right: 12px;
-        border-radius: 50%;
-        overflow: hidden;
-      }
-      .cyh-infoLeft {
-        width: 480px;
-        position: relative;
-      }
-      .cyh-infoName {
-        display: inline-block;
-        max-width: 296px;
-        margin-top: 9px;
-        font-size: 20px;
-        line-height: 24px;
-        font-weight: bold;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
-        vertical-align: middle;
-        color: #333;
-      }
-      .cyh-infoSex {
-        margin-top: 8px;
-        font-size: 12px;
-        line-height: 16px;
-        color: #666;
-      }
-      .cyh-infoNum {
-        margin-top: 11px;
-        margin-bottom: 11px;
-        font-size: 12px;
-        line-height: 16px;
-        color: #666;
-      }
-      .cyh-infoNum:hover {
-        color: #ffaa00;
-      }
-      .cyh-infoNum-img {
-        display: none;
-        width: 250px;
-        position: absolute;
-        /* top: -80px; */
-        top: 0;
-        left: 84px;
-        z-index: 300;
-        vertical-align: bottom;
-      }
-      .cyh-infoNum:hover .cyh-infoNum-img {
-        display: inline-block;
-      }
-      .cyh-userFans {
-        width: 320px;
-        height: 62px;
-        padding: 15px 0;
-        border-radius: 4px;
-        background: #f1f7fa;
-        text-align: center;
-        display: flex;
-        justify-items: center;
-      }
-      .cyh-fansItem {
-        width: 80px;
-        border-right: 1px solid #d1dfe6;
-        font-size: 12px;
-        color: #333;
-      }
-      .cyh-fansItem:hover {
-        color: #ffaa00;
-      }
-
-      
-/* 豆果达人  已登录 */
-
-.dr-active3{
-
-display: flex;
-justify-content: start;
-flex-wrap: wrap;
-}
-.dr-active3 li{
-width: 236px;
-height: 110px;
-margin: 0 96px 40px 0;
-position: relative;
-}
-.r-img1{
-  width: 64px;
-  border-radius: 50%;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-.proicon1{
-  width: 16px;
-}
-.gz3{
-  display: inline-block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  border: 1px solid black;
-  border-radius: 5px;
-  width: 73px;
-    height: 30px;
-    line-height: 28px;
-    text-align: center;
-}
-.d-title3{
-  display: inline-block;
-  color: #333;
-  margin: 20px 0;
-  text-align: left;
-margin-left: 30px;
-}
-.d-one5{
-  margin-top:18px ;
-  margin-left: 86px;
-  font-size: 12px;
-  color: #999;
-  text-align: left;
-  
-}
-/* .d-one6{
+        * {
+            box-sizing: border-box;
+        }
+        
+        #cyh-content a {
+            text-decoration: none;
+        }
+        
+        #cyh-content a:hover {
+            text-decoration: none;
+        }
+        
+        #cyh-content {
+            width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .cyh-tab {
+            width: 100%;
+            margin-top: 15px;
+        }
+        
+        .cyh-tabList {
+            margin-top: 15px;
+            font-size: 14px;
+            text-align: center;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+        }
+        
+        .cyh-tabItem {
+            color: #383830;
+            height: 42px;
+            line-height: 42px;
+            margin-right: 30px;
+        }
+        
+        .cyh-tabItem:hover {
+            color: #ffaa00;
+        }
+        
+        .cyh-active {
+            border-bottom: 2px solid #383830;
+            font-weight: bold;
+            color: #383830;
+        }
+        
+        .cyh-conList {
+            min-height: 400px;
+            margin-top: 10px;
+        }
+        
+        .cyh-conItem {
+            width: 1000px;
+            text-align: center;
+            font-size: 15px;
+            margin-top: 150px;
+            display: none;
+        }
+        
+        .cyh-active {
+            border-bottom: 2px solid #383830;
+            font-weight: bold;
+            color: #383830;
+        }
+        
+        .cyh-conActive {
+            display: block;
+        }
+        
+        .cyh-text-lips {
+            font-size: 13px;
+            color: #333;
+            line-height: 13px;
+            padding: 35px 0 10px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        
+        .cyh-text-lips a {
+            color: #333;
+            text-decoration: none;
+        }
+        
+        .cyh-text-lips a:hover {
+            color: #ffaa00;
+        }
+        
+        .cyh-text-lips a:visited {
+            color: #ffaa00;
+        }
+        
+        .cyh-userInfo {
+            margin: 40px 0 20px;
+            padding-bottom: 40px;
+            display: flex;
+            justify-items: center;
+        }
+        
+        .cyh-userImg {
+            background: url("https://tx1.douguo.com/upload/photo/1/1/1/140_3e722480ce22148d611912fb1e7f1dcb.png") no-repeat center center;
+            background-size: cover;
+            display: inline-block;
+            width: 120px;
+            height: 120px;
+            margin-right: 12px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        
+        .cyh-infoLeft {
+            width: 480px;
+            position: relative;
+        }
+        
+        .cyh-infoName {
+            display: inline-block;
+            max-width: 296px;
+            margin-top: 9px;
+            font-size: 20px;
+            line-height: 24px;
+            font-weight: bold;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            vertical-align: middle;
+            color: #333;
+        }
+        
+        .cyh-infoSex {
+            margin-top: 8px;
+            font-size: 12px;
+            line-height: 16px;
+            color: #666;
+        }
+        
+        .cyh-infoNum {
+            margin-top: 11px;
+            margin-bottom: 11px;
+            font-size: 12px;
+            line-height: 16px;
+            color: #666;
+        }
+        
+        .cyh-infoNum:hover {
+            color: #ffaa00;
+        }
+        
+        .cyh-infoNum-img {
+            display: none;
+            width: 250px;
+            position: absolute;
+            /* top: -80px; */
+            top: 0;
+            left: 84px;
+            z-index: 300;
+            vertical-align: bottom;
+        }
+        
+        .cyh-infoNum:hover .cyh-infoNum-img {
+            display: inline-block;
+        }
+        
+        .cyh-userFans {
+            width: 320px;
+            height: 62px;
+            padding: 15px 0;
+            border-radius: 4px;
+            background: #f1f7fa;
+            text-align: center;
+            display: flex;
+            justify-items: center;
+        }
+        
+        .cyh-fansItem {
+            width: 80px;
+            border-right: 1px solid #d1dfe6;
+            font-size: 12px;
+            color: #333;
+        }
+        
+        .cyh-fansItem:hover {
+            color: #ffaa00;
+        }
+        /* 豆果达人  已登录 */
+        
+        .dr-active3 {
+            display: flex;
+            justify-content: start;
+            flex-wrap: wrap;
+        }
+        
+        .dr-active3 li {
+            width: 236px;
+            height: 110px;
+            margin: 0 96px 40px 0;
+            position: relative;
+        }
+        
+        .r-img1 {
+            width: 64px;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        
+        .proicon1 {
+            width: 16px;
+        }
+        
+        .gz3 {
+            display: inline-block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            border: 1px solid black;
+            border-radius: 5px;
+            width: 73px;
+            height: 30px;
+            line-height: 28px;
+            text-align: center;
+        }
+        
+        .d-title3 {
+            display: inline-block;
+            color: #333;
+            margin: 20px 0;
+            text-align: left;
+            margin-left: 30px;
+        }
+        
+        .d-one5 {
+            margin-top: 18px;
+            margin-left: 86px;
+            font-size: 12px;
+            color: #999;
+            text-align: left;
+        }
+        /* .d-one6{
   position: absolute;
   left: 80px;
   top: 50px;
 } */
     </style>
-  </head>
-  <body>
-     <header>
+</head>
+
+<body>
+    <header>
         <div id="header">
             <div class="container header">
                 <a href="index.html"><img src="https://cp1.douguo.com/static/nweb/images/logo3.png?20191218" alt=""></a>
@@ -359,50 +389,46 @@ margin-left: 30px;
                     <li><a href="comic.html">动漫</a></li>
                 </ul>
                 <div class="search">
-                  <input type="text" placeholder="搜索菜谱、菜单、食材、用户" id="search"><input type="text" id="btn">
-                  <div class="preshow">
-                      <li class="item"><a href="recipe_desc3.html?减肥餐">1.减肥餐</a></li>
-                      <li class="item"><a href="recipe_desc3.html?家常菜">2.家常菜</a></li>
-                      <li class="item"><a href="recipe_desc3.html?南瓜">3.南瓜</a></li>
-                      <li class="item"><a href="recipe_desc3.html?月子餐">4.月子餐</a></li>
-                      <li class="item"><a href="recipe_desc3.html?饼干">5.饼干</a></li>
-                      <li class="item"><a href="recipe_desc3.html?宵夜">6.宵夜</a></li>
-                      <li class="item"><a href="recipe_desc3.html?土豆">7.土豆</a></li>
-                      <li class="item"><a href="recipe_desc3.html?快手菜">8.快手菜</a></li>
-                      <li class="item"><a href="recipe_desc3.html?早餐">9.早餐</a></li>
-                      <li class="item"><a href="recipe_desc3.html?口水鸡">10.口水鸡</a></li>
-                  </div>
-              </div>
-              <script>
-                  var ipt = document.getElementById('search');
-                  var btn = document.getElementById('btn')
-                  var preshow = document.querySelector('.preshow');
-                  btn.onclick=function(){
-                      if(ipt.value){
-                          window.location.href='recipe_desc3.html?'+ipt.value;
-                          ipt.value=''
-                      }else{
-                          ipt.value="搜索菜谱、菜单、食材、用户"
-                      }
-                  }
-                  ipt.onkeydown=function(e){
-                      if(e.keyCode==13&&ipt.value){
-                          window.location.href='recipe_desc3.html?'+ipt.value;
-                          ipt.value=''
-                      }else{
-                          ipt.value="搜索菜谱、菜单、食材、用户"
-                      }
-                  }
-                  ipt.onfocus = function() {
-                      this.placeholder = '';
-                      preshow.style.display = 'block';
-                  }
-                  ipt.onblur = function() {
-                      setTimeout(function() {
-                          preshow.style.display = 'none';
-                      }, 2000)
-                  }
-              </script>
+                    <input type="text" placeholder="搜索菜谱、菜单、食材、用户" id="search"><input type="text" id="btn">
+                    <div class="preshow">
+                        <li class="item"><a href="recipe_desc3.html?减肥餐">1.减肥餐</a></li>
+                        <li class="item"><a href="recipe_desc3.html?家常菜">2.家常菜</a></li>
+                        <li class="item"><a href="recipe_desc3.html?南瓜">3.南瓜</a></li>
+                        <li class="item"><a href="recipe_desc3.html?月子餐">4.月子餐</a></li>
+                        <li class="item"><a href="recipe_desc3.html?饼干">5.饼干</a></li>
+                        <li class="item"><a href="recipe_desc3.html?宵夜">6.宵夜</a></li>
+                        <li class="item"><a href="recipe_desc3.html?土豆">7.土豆</a></li>
+                        <li class="item"><a href="recipe_desc3.html?快手菜">8.快手菜</a></li>
+                        <li class="item"><a href="recipe_desc3.html?早餐">9.早餐</a></li>
+                        <li class="item"><a href="recipe_desc3.html?口水鸡">10.口水鸡</a></li>
+                    </div>
+                </div>
+                <script>
+                    var ipt = document.getElementById('search');
+                    var btn = document.getElementById('btn')
+                    var preshow = document.querySelector('.preshow');
+                    btn.onclick = function() {
+                        if (ipt.value) {
+                            window.location.href = 'recipe_desc3.html?' + ipt.value;
+                            ipt.value = ''
+                        }
+                    }
+                    ipt.onkeydown = function(e) {
+                        if (e.keyCode == 13 && ipt.value) {
+                            window.location.href = 'recipe_desc3.html?' + ipt.value;
+                            ipt.value = ''
+                        }
+                    }
+                    ipt.onfocus = function() {
+                        this.placeholder = '';
+                        preshow.style.display = 'block';
+                    }
+                    ipt.onblur = function() {
+                        setTimeout(function() {
+                            preshow.style.display = 'none';
+                        }, 2000)
+                    }
+                </script>
                 <div class="publish">
                     <div class="release">发布</div>
                     <div class="pubt-box">
@@ -561,170 +587,163 @@ margin-left: 30px;
             </div>
         </div>
     </div>
-  </header>  -->
+    </header> -->
     <div id="cyh-content">
-      <!-- 用户信息 -->
-      <div class="cyh-userInfo">
-        <a class="cyh-userImg" href="javascript:;"></a>
-        <div class="cyh-infoLeft">
-          <a class="cyh-infoName" href="javascript:;">userName用户名</a>
-          <p class="cyh-infoSex">
-            <img
-              src="https://cp1.douguo.com/static/nweb/images/male.png"
-              alt=""
-            />
-          </p>
-          <p class="cyh-infoNum">
-            经验值：35
-            <img
-              class="cyh-infoNum-img"
-              src="https://i1.douguo.com//upload/banner/1576583892.png"
-              alt=""
-            />
-          </p>
+        <!-- 用户信息 -->
+        <div class="cyh-userInfo">
+            <a class="cyh-userImg" href="javascript:;"></a>
+            <div class="cyh-infoLeft">
+                <a class="cyh-infoName" href="javascript:;">userName用户名</a>
+                <p class="cyh-infoSex">
+                    <img src="https://cp1.douguo.com/static/nweb/images/male.png" alt="" />
+                </p>
+                <p class="cyh-infoNum">
+                    经验值：35
+                    <img class="cyh-infoNum-img" src="https://i1.douguo.com//upload/banner/1576583892.png" alt="" />
+                </p>
+            </div>
+            <div class="cyh-infoRight">
+                <div class="cyh-userFans">
+                    <div class="cyh-fansItem">
+                        <p style="margin-bottom: 5px; font-size: 15px" class="b-incr">0</p>
+                        <p>关注</p>
+                    </div>
+                    <div class="cyh-fansItem">
+                        <p style="margin-bottom: 5px; font-size: 15px">0</p>
+                        <p>粉丝</p>
+                    </div>
+                    <div class="cyh-fansItem">
+                        <p style="margin-bottom: 5px; font-size: 15px">0</p>
+                        <p>菜谱</p>
+                    </div>
+                    <div class="cyh-fansItem">
+                        <p style="margin-bottom: 5px; font-size: 15px">0</p>
+                        <p>笔记</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="cyh-infoRight">
-          <div class="cyh-userFans">
-            <div class="cyh-fansItem">
-              <p style="margin-bottom: 5px; font-size: 15px" class="b-incr">0</p>
-              <p>关注</p>
-            </div>
-            <div class="cyh-fansItem">
-              <p style="margin-bottom: 5px; font-size: 15px">0</p>
-              <p>粉丝</p>
-            </div>
-            <div class="cyh-fansItem">
-              <p style="margin-bottom: 5px; font-size: 15px">0</p>
-              <p>菜谱</p>
-            </div>
-            <div class="cyh-fansItem">
-              <p style="margin-bottom: 5px; font-size: 15px">0</p>
-              <p>笔记</p>
-            </div>
-          </div>
+        <!-- 导航栏切换 -->
+        <div class="cyh-tab">
+            <ul class="cyh-tabList">
+                <li data-index="0" class="cyh-tabItem cyh-active">关注我的人</li>
+                <li data-index="1" class="cyh-tabItem">我关注的人</li>
+            </ul>
         </div>
-      </div>
-      <!-- 导航栏切换 -->
-      <div class="cyh-tab">
-        <ul class="cyh-tabList">
-          <li data-index="0" class="cyh-tabItem cyh-active">关注我的人</li>
-          <li data-index="1" class="cyh-tabItem">我关注的人</li>
+        <ul class="cyh-conList">
+            <li class="cyh-conItem cyh-conActive">暂无关注我的人</li>
+            <li class="cyh-conItem ">
+                <ul class="dr-active3"></ul>
+            </li>
         </ul>
-      </div>
-      <ul class="cyh-conList">
-        <li class="cyh-conItem cyh-conActive">暂无关注我的人</li>
-        <li class="cyh-conItem ">
-            <ul class="dr-active3"></ul>
-        </li>
-      </ul>
-      <p class="cyh-text-lips">
-        你当前的位置： <a href="#">豆果美食</a> &gt; 个人中心
-      </p>
+        <p class="cyh-text-lips">
+            你当前的位置： <a href="#">豆果美食</a> &gt; 个人中心
+        </p>
     </div>
     <footer>
-      <div id="footer">
-          <div class="container">
-              <div class="dginfo">
-                  <div class="footleft">
-                      <div class="footlogo">
-                          <img src="https://cp1.douguo.com//static/nweb/images/logo3.png?20191218" alt="">
-                      </div>
-                      <div class="datainfo">
-                          <p><span>500万+</span>美食菜谱；<span>2000万+</span>互动内容；<span>3000+</span>美食课堂；<span>5000万+</span>用户每天都有新分享</p>
-                      </div>
-                  </div>
-                  <div class="footright">
-                      <h3>扫二维码，下载豆果手机应用：</h3>
-                      <ul>
-                          <li>
-                              <a href="" class=""><img width="92" height="92" src="https://cp1.douguo.com//static/nweb/images/qrcode.png?2001" alt="豆果美食"></a>
-                              <p>豆果美食</p>
-                          </li>
-                          <li>
-                              <a href="" class=""><img width="92" height="92" src="https://cp1.douguo.com//static/nweb/images/xcx.jpg?2001" alt="豆果美食"></a>
-                              <p>微信扫一扫</p>
-                          </li>
-                          <li>
-                              <a href="" class=""><img width="92" height="92" src="https://i1.douguo.com//upload/banner/1578991488.png" alt="豆果美食"></a>
-                              <p>豆果公众号</p>
-                          </li>
-                      </ul>
-                  </div>
-              </div>
-              <div class="footest">
-                  <div class="footlink">
-                      <a href="">关于豆果</a>
-                      <span>·</span>
-                      <a href="">在豆果工作</a>
-                      <span>·</span>
-                      <a href="">意见反馈</a>
-                      <span>·</span>
-                      <a href="">友情链接</a>
-                      <span>·</span>
-                      <a href="">菜谱大全</a>
-                  </div>
-                  <div class="cght" style="text-align: center;">
-                      <a href="https://www.douguo.com" target="_blank">北京豆果信息技术有限公司</a>
-                      <span>京ICP证111032号</span>
-                      <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502038268">
-                          <img src="https://i1.douguo.com//upload/banner/1564469142.png" lazysrc="" style="margin-bottom: -3px;width:20px"> 京公网安备 11010502038268号
-                      </a>
-                      <a target="_blank" href="http://beian.miit.gov.cn">京ICP备09012748号</a>
-                      <p style="margin:5px 0;cursor: pointer;" onclick="$('.smask2').show();$('.medicinal_box').show();">互联网药品信息服务资格证书</p>
-                      <a href="http://sq.ccm.gov.cn/ccnt/sczr/doLogin" target="_blank">
-                          <img src="https://i1.douguo.com//upload/banner/1522057799.png" style="margin-bottom: -3px;width:20px"> 京网文【2017】6954-770号
-                      </a> 食品流通许可证SP1101061510252413
-                      <a href="javascript:void(0);" style="display:block;text-align:center;margin-top:5px;" onclick="$('.smask2').show();$('.tvbox').show();">广播电视节目制作经营许可证（京）字第11624号</a>
-                      <div class="smask2" style="position:fixed;width:100%;height:100%;top:0;left:0;background: black;z-index:999;display: none;opacity: .6;filter: alpha(opacity=60)"></div>
-                      <div class="tvbox" style="position: fixed;top:50%;left:50%;z-index:1000;margin-left:-350px;margin-top:-250px;display: none;">
-                          <img src="https://i1.douguo.com//upload/banner/1551092008.jpg" alt="">
-                          <img style="position: absolute;top:15px;right:15px;cursor: pointer;" src="https://cp1.douguo.com/static/nweb/images/close.png" alt="" onclick="$('.smask2').hide();$('.tvbox').hide();">
-                      </div>
-                      <div class="medicinal_box" style="position: fixed;top:50%;left:50%;z-index:1000;margin-left:-350px;margin-top:-250px;display: none;">
-                          <img style="display:block;width:700px;" src="https://i1.douguo.com//upload/banner/1577185524.jpg" alt="">
-                          <img style="position: absolute;top:15px;right:15px;cursor: pointer;" src="https://cp1.douguo.com/static/nweb/images/close.png" alt="" onclick="$('.smask2').hide();$('.medicinal_box').hide();">
-                      </div>
-                  </div>
-                  <div class="fans">
-                      <a href=""><img height="22px" src="https://i1.douguo.com/upload/banner/1528470330.png" alt=""></a>
-                      <a href=""><img height="22px" src="https://i1.douguo.com/upload/banner/1528470330.png" alt=""></a>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </footer>
+        <div id="footer">
+            <div class="container">
+                <div class="dginfo">
+                    <div class="footleft">
+                        <div class="footlogo">
+                            <img src="https://cp1.douguo.com//static/nweb/images/logo3.png?20191218" alt="">
+                        </div>
+                        <div class="datainfo">
+                            <p><span>500万+</span>美食菜谱；<span>2000万+</span>互动内容；<span>3000+</span>美食课堂；<span>5000万+</span>用户每天都有新分享</p>
+                        </div>
+                    </div>
+                    <div class="footright">
+                        <h3>扫二维码，下载豆果手机应用：</h3>
+                        <ul>
+                            <li>
+                                <a href="" class=""><img width="92" height="92" src="https://cp1.douguo.com//static/nweb/images/qrcode.png?2001" alt="豆果美食"></a>
+                                <p>豆果美食</p>
+                            </li>
+                            <li>
+                                <a href="" class=""><img width="92" height="92" src="https://cp1.douguo.com//static/nweb/images/xcx.jpg?2001" alt="豆果美食"></a>
+                                <p>微信扫一扫</p>
+                            </li>
+                            <li>
+                                <a href="" class=""><img width="92" height="92" src="https://i1.douguo.com//upload/banner/1578991488.png" alt="豆果美食"></a>
+                                <p>豆果公众号</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footest">
+                    <div class="footlink">
+                        <a href="">关于豆果</a>
+                        <span>·</span>
+                        <a href="">在豆果工作</a>
+                        <span>·</span>
+                        <a href="">意见反馈</a>
+                        <span>·</span>
+                        <a href="">友情链接</a>
+                        <span>·</span>
+                        <a href="">菜谱大全</a>
+                    </div>
+                    <div class="cght" style="text-align: center;">
+                        <a href="https://www.douguo.com" target="_blank">北京豆果信息技术有限公司</a>
+                        <span>京ICP证111032号</span>
+                        <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502038268">
+                            <img src="https://i1.douguo.com//upload/banner/1564469142.png" lazysrc="" style="margin-bottom: -3px;width:20px"> 京公网安备 11010502038268号
+                        </a>
+                        <a target="_blank" href="http://beian.miit.gov.cn">京ICP备09012748号</a>
+                        <p style="margin:5px 0;cursor: pointer;" onclick="$('.smask2').show();$('.medicinal_box').show();">互联网药品信息服务资格证书</p>
+                        <a href="http://sq.ccm.gov.cn/ccnt/sczr/doLogin" target="_blank">
+                            <img src="https://i1.douguo.com//upload/banner/1522057799.png" style="margin-bottom: -3px;width:20px"> 京网文【2017】6954-770号
+                        </a> 食品流通许可证SP1101061510252413
+                        <a href="javascript:void(0);" style="display:block;text-align:center;margin-top:5px;" onclick="$('.smask2').show();$('.tvbox').show();">广播电视节目制作经营许可证（京）字第11624号</a>
+                        <div class="smask2" style="position:fixed;width:100%;height:100%;top:0;left:0;background: black;z-index:999;display: none;opacity: .6;filter: alpha(opacity=60)"></div>
+                        <div class="tvbox" style="position: fixed;top:50%;left:50%;z-index:1000;margin-left:-350px;margin-top:-250px;display: none;">
+                            <img src="https://i1.douguo.com//upload/banner/1551092008.jpg" alt="">
+                            <img style="position: absolute;top:15px;right:15px;cursor: pointer;" src="https://cp1.douguo.com/static/nweb/images/close.png" alt="" onclick="$('.smask2').hide();$('.tvbox').hide();">
+                        </div>
+                        <div class="medicinal_box" style="position: fixed;top:50%;left:50%;z-index:1000;margin-left:-350px;margin-top:-250px;display: none;">
+                            <img style="display:block;width:700px;" src="https://i1.douguo.com//upload/banner/1577185524.jpg" alt="">
+                            <img style="position: absolute;top:15px;right:15px;cursor: pointer;" src="https://cp1.douguo.com/static/nweb/images/close.png" alt="" onclick="$('.smask2').hide();$('.medicinal_box').hide();">
+                        </div>
+                    </div>
+                    <div class="fans">
+                        <a href=""><img height="22px" src="https://i1.douguo.com/upload/banner/1528470330.png" alt=""></a>
+                        <a href=""><img height="22px" src="https://i1.douguo.com/upload/banner/1528470330.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script>
-      const cyhLists=document.querySelector('.cyh-tabList');
-      const cyhItem=document.querySelectorAll('.cyh-tabItem');
-      const cyhConItem=document.querySelectorAll('.cyh-conItem');
-      // console.log(cyhConItem);
+        const cyhLists = document.querySelector('.cyh-tabList');
+        const cyhItem = document.querySelectorAll('.cyh-tabItem');
+        const cyhConItem = document.querySelectorAll('.cyh-conItem');
+        // console.log(cyhConItem);
 
-      cyhLists.onclick=function(e){
-        if(e.target.localName=='li'){
-          // console.log(e.target.dataset.index);
-          var num=e.target.dataset.index;
-          for(var i=0;i<cyhItem.length;i++){
-            // 切换tab
-            cyhItem[i].classList.remove('cyh-active');
-            cyhItem[num].classList.add('cyh-active');
-            // 切换内容框
-            cyhConItem[i].classList.remove('cyh-conActive');
-            cyhConItem[num].classList.add('cyh-conActive');
-          }
+        cyhLists.onclick = function(e) {
+            if (e.target.localName == 'li') {
+                // console.log(e.target.dataset.index);
+                var num = e.target.dataset.index;
+                for (var i = 0; i < cyhItem.length; i++) {
+                    // 切换tab
+                    cyhItem[i].classList.remove('cyh-active');
+                    cyhItem[num].classList.add('cyh-active');
+                    // 切换内容框
+                    cyhConItem[i].classList.remove('cyh-conActive');
+                    cyhConItem[num].classList.add('cyh-conActive');
+                }
+            }
         }
-      }
 
 
-           //豆果达人  已登录
+        //豆果达人  已登录
 
-           var active=document.querySelector('.dr-active3')
-                          fetch("http://localhost:8080/follow").then((response)=>{
-                              return response.json()
-                          }).then((res)=>{
-                            
-                              for (var i = 0; i < res.data.length; i++) {
-                 active.innerHTML += `
+        var active = document.querySelector('.dr-active3')
+        fetch("http://localhost:8080/follow").then((response) => {
+            return response.json()
+        }).then((res) => {
+
+            for (var i = 0; i < res.data.length; i++) {
+                active.innerHTML += `
              <li>
              <a href="#">
               <img class="r-img1" src="${res.data[i].author_photo}" alt="">
@@ -741,47 +760,45 @@ margin-left: 30px;
            </li>
              
              `;
-            
-            }   
 
-             var incr=document.querySelector('.b-incr') 
-             var active1s=document.querySelectorAll('.dr-active3 li')
-         var a=active1s.length
-           incr.innerHTML=a
-           var gz3=document.querySelectorAll('.gz3') 
-            //  console.log(gz3)
-              for(var j=0;j<gz3.length;j++){
-              
-                gz3[j].onclick=function(e){
-                //  console.log(res.data[e.target.dataset.index].id )
-                 
-                 var b=res.data[e.target.dataset.index].id 
-                 if( e.target.innerHTML=='+关注'){
-                           e.target.innerHTML='已关注'
-                           fetch("http://localhost:8080/follow1?id="+b).then((response)=>{
+            }
+
+            var incr = document.querySelector('.b-incr')
+            var active1s = document.querySelectorAll('.dr-active3 li')
+            var a = active1s.length
+            incr.innerHTML = a
+            var gz3 = document.querySelectorAll('.gz3')
+                //  console.log(gz3)
+            for (var j = 0; j < gz3.length; j++) {
+
+                gz3[j].onclick = function(e) {
+                    //  console.log(res.data[e.target.dataset.index].id )
+
+                    var b = res.data[e.target.dataset.index].id
+                    if (e.target.innerHTML == '+关注') {
+                        e.target.innerHTML = '已关注'
+                        fetch("http://localhost:8080/follow1?id=" + b).then((response) => {
                             return response.json()
-                        }).then((res)=>{
+                        }).then((res) => {
                             // console.log(res)
-                        })  
-                       }else if( e.target.innerHTML=='已关注'){
-                           e.target.innerHTML='+关注'
-                           fetch("http://localhost:8080/follow2?id="+b).then((response)=>{
+                        })
+                    } else if (e.target.innerHTML == '已关注') {
+                        e.target.innerHTML = '+关注'
+                        fetch("http://localhost:8080/follow2?id=" + b).then((response) => {
                             return response.json()
-                        }).then((res)=>{
+                        }).then((res) => {
                             console.log(res)
-                        })  
-                       }
-                  
+                        })
+                    }
 
-                }       
-                     }
-                    
 
-              
-          })
- 
-      
+                }
+            }
+
+
+
+        })
     </script>
-  </body>
+</body>
+
 </html>
- 
