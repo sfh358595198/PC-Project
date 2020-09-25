@@ -359,33 +359,50 @@ margin-left: 30px;
                     <li><a href="comic.html">动漫</a></li>
                 </ul>
                 <div class="search">
-                    <input type="text" placeholder="搜索菜谱、菜单、食材、用户" id="search"><input type="text">
-                    <div class="preshow">
-                        <li class="item"><a href="recipe_desc3.html?减肥餐">1.减肥餐</a></li>
-                        <li class="item"><a href="recipe_desc3.html?家常菜">2.家常菜</a></li>
-                        <li class="item"><a href="recipe_desc3.html?南瓜">3.南瓜</a></li>
-                        <li class="item"><a href="recipe_desc3.html?月子餐">4.月子餐</a></li>
-                        <li class="item"><a href="recipe_desc3.html?饼干">5.饼干</a></li>
-                        <li class="item"><a href="recipe_desc3.html?宵夜">6.宵夜</a></li>
-                        <li class="item"><a href="recipe_desc3.html?土豆">7.土豆</a></li>
-                        <li class="item"><a href="recipe_desc3.html?快手菜">8.快手菜</a></li>
-                        <li class="item"><a href="recipe_desc3.html?早餐">9.早餐</a></li>
-                        <li class="item"><a href="recipe_desc3.html?口水鸡">10.口水鸡</a></li>
-                    </div>
-                </div>
-                <script>
-                    var ipt = document.getElementById('search');
-                    var preshow = document.querySelector('.preshow');
-                    ipt.onfocus = function() {
-                        this.placeholder = '';
-                        preshow.style.display = 'block';
-                    }
-                    ipt.onblur = function() {
-                        setTimeout(function() {
-                            preshow.style.display = 'none';
-                        }, 2000)
-                    }
-                </script>
+                  <input type="text" placeholder="搜索菜谱、菜单、食材、用户" id="search"><input type="text" id="btn">
+                  <div class="preshow">
+                      <li class="item"><a href="recipe_desc3.html?减肥餐">1.减肥餐</a></li>
+                      <li class="item"><a href="recipe_desc3.html?家常菜">2.家常菜</a></li>
+                      <li class="item"><a href="recipe_desc3.html?南瓜">3.南瓜</a></li>
+                      <li class="item"><a href="recipe_desc3.html?月子餐">4.月子餐</a></li>
+                      <li class="item"><a href="recipe_desc3.html?饼干">5.饼干</a></li>
+                      <li class="item"><a href="recipe_desc3.html?宵夜">6.宵夜</a></li>
+                      <li class="item"><a href="recipe_desc3.html?土豆">7.土豆</a></li>
+                      <li class="item"><a href="recipe_desc3.html?快手菜">8.快手菜</a></li>
+                      <li class="item"><a href="recipe_desc3.html?早餐">9.早餐</a></li>
+                      <li class="item"><a href="recipe_desc3.html?口水鸡">10.口水鸡</a></li>
+                  </div>
+              </div>
+              <script>
+                  var ipt = document.getElementById('search');
+                  var btn = document.getElementById('btn')
+                  var preshow = document.querySelector('.preshow');
+                  btn.onclick=function(){
+                      if(ipt.value){
+                          window.location.href='recipe_desc3.html?'+ipt.value;
+                          ipt.value=''
+                      }else{
+                          ipt.value="搜索菜谱、菜单、食材、用户"
+                      }
+                  }
+                  ipt.onkeydown=function(e){
+                      if(e.keyCode==13&&ipt.value){
+                          window.location.href='recipe_desc3.html?'+ipt.value;
+                          ipt.value=''
+                      }else{
+                          ipt.value="搜索菜谱、菜单、食材、用户"
+                      }
+                  }
+                  ipt.onfocus = function() {
+                      this.placeholder = '';
+                      preshow.style.display = 'block';
+                  }
+                  ipt.onblur = function() {
+                      setTimeout(function() {
+                          preshow.style.display = 'none';
+                      }, 2000)
+                  }
+              </script>
                 <div class="publish">
                     <div class="release">发布</div>
                     <div class="pubt-box">
