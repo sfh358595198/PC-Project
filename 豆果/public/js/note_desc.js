@@ -145,7 +145,7 @@ fetch('http://localhost:8080/note?detail_id=' + window.location.search.split('='
                 </div>
             </div>
             `;
-    title.innerHTML = '' + res.data[0].title + ''
+    title.innerHTML = '' + res.data[0].title.length > 10 ? res.data[0].title.slice(0, 10) : res.data[0].title + ''
 })
 setTimeout(() => {
     var love = document.querySelectorAll('.love');

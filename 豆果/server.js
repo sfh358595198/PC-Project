@@ -114,7 +114,7 @@ app.get('/works', (req, res) => {
 });
 //商城
 app.get('/shopp', (req, res) => {
-    connection.query('select * from mall  limit 0,' + req.query.id + '', function(err, result) {
+    connection.query('select * from mall  limit  ' + req.query.id + ',28', function(err, result) {
         const obj = {
             data: result
         }
@@ -283,7 +283,7 @@ app.get('/anime', (req, res) => { //动漫接口
 })
 app.get('/note', (req, res) => { //笔记接口
     if (req.query.tab != undefined) {
-        connection.query('select * from note limit ' + req.query.tab + ',50', function(err, data) {
+        connection.query('select * from note limit ' + req.query.tab + ',30', function(err, data) {
             if (err) throw err
             const obj = {
                 status: 200,
@@ -371,14 +371,14 @@ app.get('/step2', (req, res) => {
     })
     // 糖醋香菇条的相关推荐
 app.get('/related2', (req, res) => {
-        connection.query('select * from douguo_else where id>12 and id<19', function(err, data) {
-            const obj = {
-                status: 200,
-                data
-            }
-            res.json(obj)
-        })
+    connection.query('select * from douguo_else where id>12 and id<19', function(err, data) {
+        const obj = {
+            status: 200,
+            data
+        }
+        res.json(obj)
     })
+})
 
 
 
@@ -407,7 +407,7 @@ app.get('/data0', (req, res) => {
 
 
 
-    // 菜谱菜单单击
+// 菜谱菜单单击
 app.get('/desc2', (req, res) => {
     connection.query('select * from recipe_menu_desc', function(err, result) {
         console.log(111, result)

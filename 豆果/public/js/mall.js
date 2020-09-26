@@ -1,12 +1,13 @@
 var sccontent = document.querySelector(".sc-content");
-var a = 28
-var c = a + 28
+
+var c = 0
 $(window).bind("scroll", function() {
     var scrollTop = $(this).scrollTop();　　
     var scrollHeight = $(document).height();　　
     var windowHeight = $(this).height();
     // console.log(scrollHeight-scrollTop-windowHeight )
     if (scrollHeight - scrollTop - windowHeight == 0) {
+        c = c + 28
         get(c)
     }
 });
@@ -29,4 +30,4 @@ function get(b) {
         }
     })
 }
-get(28)
+get(0)

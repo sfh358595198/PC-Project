@@ -3,8 +3,8 @@ var num = 0;
 function getdata() {
     var list = document.querySelectorAll('.list');
     for (let i = 0; i < list.length; i++) {
-        num += 50;
-        fetch('http://localhost:8080/note?tab=' + (num - 50)).then(response => {
+        num += 30;
+        fetch('http://localhost:8080/note?tab=' + (num - 30)).then(response => {
             return response.json()
         }).then(res => {
             res.data.forEach((item, index, all) => {
